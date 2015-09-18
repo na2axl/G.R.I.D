@@ -1,0 +1,347 @@
+<!DOCTYPE HTML>
+
+<html>
+
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width; initial-scale=1.0" />
+        <title>The Insatller - Designed with G.R.I.D</title>
+        <link rel="stylesheet" type="text/css" href="../../css/g.r.i.d.css" />
+        <link rel="stylesheet" type="text/css" href="main.css" />
+    </head>
+
+    <body>
+        <div id="page">
+            <header id="header-wrapper">
+                <div class="container">
+                    <div class="grid">
+                        <div class="g12">
+                            <section class="setup-header">
+                                <header class="setup-title">
+                                    <h1>Welcome to <span>Installer</span></h1>
+                                    <p class="setup-description">A simple template who simulate an CMS's installer. Created by @na2axl for G.R.I.D</p>
+                                </header>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div id="main-wrapper">
+                <div class="container">
+                    <div class="grid">
+                        <div class="g12">
+                            <section class="overall-progress">
+                                <header>
+                                    <h3>Overall progress</h3>
+                                    <p>See where you are with all the process</p>
+                                </header>
+                                <div id="progress-alert-wrapper"></div>
+                                <div class="progressbar">
+                                    <div class="progress" id="overall-progress"></div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="grid">
+                        <div class="g12">
+                            <div class="panel-wrapper">
+                                <nav class="setup-steps">
+                                    <ul class="nav-panel">
+                                        <li><a href="#introduction" class="active panel-switcher disable-switch"><span class="step-num">1</span> <span>Introduction</span></a></li>
+                                        <li><a href="#database" class="panel-switcher disable-switch"><span class="step-num">2</span> <span class="icon fa-database">Databases config</span></a></li>
+                                        <li><a href="#site" class="panel-switcher disable-switch"><span class="step-num">3</span> <span class="icon fa-globe">Site config</span></a></li>
+                                        <li><a href="#admin" class="panel-switcher disable-switch"><span class="step-num">4</span> <span class="icon fa-user">Account config</span></a></li>
+                                        <li><a href="#finish" class="panel-switcher disable-switch"><span class="step-num">5</span> <span>Finish</span></a></li>
+                                    </ul>
+                                </nav>
+                                <section>
+                                    <div id="step-alerts-wrapper"></div>
+                                    <div id="step-loader-wrapper"></div>
+                                </section>
+                                <div class="panels">
+                                    <div id="introduction" class="panel">
+                                        <section class="step">
+                                            <header>
+                                                <h2>Introduction</h2>
+                                                <p>Describe your CMS before beginning the installation !</p>
+                                            </header>
+                                            <article>
+                                                <p>Commodo id natoque malesuada sollicitudin elit suscipit. Curae suspendisse mauris posuere accumsan massa posuere lacus convallis tellus interdum. Amet nullam fringilla nibh nulla convallis ut venenatis purus sit arcu sociis. Nunc fermentum adipiscing tempor cursus nascetur adipiscing adipiscing.</p>
+                                                <p>Primis aliquam mus lacinia lobortis phasellus suscipit. Fermentum lobortis non tristique ante proin sociis accumsan lobortis. Auctor etiam porttitor phasellus tempus cubilia ultrices tempor sagittis.</p>
+                                                <p><b>So, let's begin the installation !</b></p>
+                                            </article>
+                                            <footer>
+                                                <div class="grid flush">
+                                                    <div class="g12 next">
+                                                        <a class="button next-step panel-switcher" href="#database" id="go-to-database" >Databases config</a>
+                                                    </div>
+                                                </div>
+                                            </footer>
+                                        </section>
+                                    </div>
+                                    <div id="database" class="panel">
+                                        <section class="step">
+                                            <header>
+                                                <h2>Databases Config</h2>
+                                                <p>Where you want to store your new site's data ?</p>
+                                            </header>
+                                            <form action="#" id="database-config-form" method="post">
+                                                <div class="grid quarter">
+                                                    <div class="g4">
+                                                        <label>Databes's server address <span>*</span></label>
+                                                    </div>
+                                                    <div class="g4">
+                                                        <input type="text" name="db_server" class="important" placeholder="Database's server address" value="" />
+                                                    </div>
+                                                    <div class="g4">
+                                                        <p>Enter the server address of your database. For local servers, it's generally <i><b>localhost</b></i> or <i><b>127.0.0.1</b></i></p>
+                                                    </div>
+                                                </div>
+                                                <div class="grid quarter">
+                                                    <div class="g4">
+                                                        <label>Username <span>*</span></label>
+                                                    </div>
+                                                    <div class="g4">
+                                                        <input type="text" name="db_username" class="important" placeholder="Username" value="" />
+                                                    </div>
+                                                    <div class="g4">
+                                                        <p>Enter the username that you use to connect to your database's server. For local servers, it's generally <i><b>root</b></i></p>
+                                                    </div>
+                                                </div>
+                                                <div class="grid quarter">
+                                                    <div class="g4">
+                                                        <label>Password</label>
+                                                    </div>
+                                                    <div class="g4">
+                                                        <input type="text" name="db_password" placeholder="Password" value="" />
+                                                    </div>
+                                                    <div class="g4">
+                                                        <p>Enter the password of the username that you use to connect to your database's server. For local servers, it's generally nothing</p>
+                                                    </div>
+                                                </div>
+                                                <div class="grid quarter">
+                                                    <div class="g4">
+                                                        <label>Database's name <span>*</span></label>
+                                                    </div>
+                                                    <div class="g4">
+                                                        <input type="text" name="db_name" class="important" placeholder="Database's name" value="cms" />
+                                                    </div>
+                                                    <div class="g4">
+                                                        <p>Enter the name of the database that you want to use for your site.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="grid quarter">
+                                                    <div class="g4">
+                                                        <label>Table's prefix</label>
+                                                    </div>
+                                                    <div class="g4">
+                                                        <input type="text" name="db_prefix" placeholder="Table's prefix" value="cms_" />
+                                                    </div>
+                                                    <div class="g4">
+                                                        <p>Enter the text to add at the beginning of all tables's name. It's useful when you want to install more than one copy of CMS on the same database</p>
+                                                    </div>
+                                                </div>
+                                                <div class="grid quarter">
+                                                    <div class="g12">
+                                                        <p>Fields with a <b>*</b> are required !</p>
+                                                    </div>
+                                                </div>
+                                                <div class="grid">
+                                                    <div class="g12">
+                                                        <input type="submit" value="Connect to my database !" />
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            <footer>
+                                                <div class="grid flush">
+                                                    <div class="g6 prev">
+                                                        <a class="button prev-step panel-switcher" href="#introduction" id="go-to-introduction" >Introduction</a>
+                                                    </div>
+                                                    <div class="g6 next">
+                                                        <a class="button next-step panel-switcher" href="#site" id="go-to-site" >Site config</a>
+                                                    </div>
+                                                </div>
+                                            </footer>
+                                        </section>
+                                    </div>
+                                    <div id="site" class="panel">
+                                        <section class="step">
+                                            <header>
+                                                <h2>Site Config</h2>
+                                                <p>Give us some informations about your new site ! You will be able to change these informations after.</p>
+                                            </header>
+                                            <form action="#" id="site-config-form" method="post">
+                                                <div class="grid quarter">
+                                                    <div class="g4">
+                                                        <label>Site's title <span>*</span></label>
+                                                    </div>
+                                                    <div class="g4">
+                                                        <input type="text" name="site_name" class="important" placeholder="Title" value="" />
+                                                    </div>
+                                                    <div class="g4">
+                                                        <p>Enter the name of your new site. Try to find a name who reflect the content of the site.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="grid quarter">
+                                                    <div class="g4">
+                                                        <label>Site's description</label>
+                                                    </div>
+                                                    <div class="g4">
+                                                        <textarea type="text" name="site_description" placeholder="Description" rows="5"></textarea>
+                                                    </div>
+                                                    <div class="g4">
+                                                        <p>Enter the description of your new site. This information is not really important now, but it's highly recommended to define her.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="grid quarter">
+                                                    <div class="g4">
+                                                        <label>Search engines</label>
+                                                    </div>
+                                                    <div class="g4">
+                                                        <select name="site_index">
+                                                            <option value="0" selected="selected">No</option>
+                                                            <option value="1">Yes</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="g4">
+                                                        <p>Choose if you need that search engines index your new site. We recommend you to choose <i><b>yes</b></i> after you have posted more than <b>3 contents</b>.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="grid quarter">
+                                                    <div class="g12">
+                                                        <p>Fields with a <b>*</b> are required !</p>
+                                                    </div>
+                                                </div>
+                                                <div class="grid">
+                                                    <div class="g12">
+                                                        <input type="submit" value="Create my site !" />
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            <footer>
+                                                <div class="grid flush">
+                                                    <div class="g12 next">
+                                                        <a class="button next-step panel-switcher" href="#admin" id="go-to-account" >Account config</a>
+                                                    </div>
+                                                </div>
+                                            </footer>
+                                        </section>
+                                    </div>
+                                    <div id="admin" class="panel">
+                                        <section class="step">
+                                            <header>
+                                                <h2>Account Config</h2>
+                                                <p>Create the admin account that you will use to manage your site</p>
+                                            </header>
+                                            <form action="#" id="account-config-form" method="post">
+                                                <div class="grid quarter">
+                                                    <div class="g4">
+                                                        <label>Admin username <span>*</span></label>
+                                                    </div>
+                                                    <div class="g4">
+                                                        <input type="text" name="admin_username" class="important" placeholder="Username" value="" />
+                                                    </div>
+                                                    <div class="g4">
+                                                        <p>Enter the username that you will use for your admin account.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="grid quarter">
+                                                    <div class="g4">
+                                                        <label>Password <span>*</span></label>
+                                                    </div>
+                                                    <div class="g4">
+                                                        <div class="grid quarter">
+                                                            <div class="g12">
+                                                                <input type="text" name="admin_password" class="important" placeholder="Password" value="" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="grid quarter">
+                                                            <div class="g12">
+                                                                <input type="text" name="admin_password_confirm" class="important" placeholder="Re-type password" value="" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="g4">
+                                                        <p>Enter the password of the username entered. It's recommended that you use long password, with numbers, specials characters (@, #, $, %, &) and spaces.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="grid quarter">
+                                                    <div class="g4">
+                                                        <label>Email address</label>
+                                                    </div>
+                                                    <div class="g4">
+                                                        <input type="text" name="admin_mail" placeholder="Email address" value="" />
+                                                    </div>
+                                                    <div class="g4">
+                                                        <p>Enter the email address that you will use for send newsletters to your users.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="grid quarter">
+                                                    <div class="g12">
+                                                        <p>Fields with a <b>*</b> are required !</p>
+                                                    </div>
+                                                </div>
+                                                <div class="grid">
+                                                    <div class="g12">
+                                                        <input type="submit" value="Create my account !" />
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            <footer>
+                                                <div class="grid flush">
+                                                    <div class="g12 next">
+                                                        <a class="button next-step panel-switcher" href="#finish" id="go-to-finish" >Finish</a>
+                                                    </div>
+                                                </div>
+                                            </footer>
+                                        </section>
+                                    </div>
+                                    <div id="finish" class="panel">
+                                        <section class="step">
+                                            <header>
+                                                <h2>Finish !</h2>
+                                                <p>You have successfully finished the installation of CMS !</p>
+                                            </header>
+                                            <article>
+                                                <p>Commodo id natoque malesuada sollicitudin elit suscipit. Curae suspendisse mauris posuere accumsan massa posuere lacus convallis tellus interdum. Amet nullam fringilla nibh nulla convallis ut venenatis purus sit arcu sociis. Nunc fermentum adipiscing tempor cursus nascetur adipiscing adipiscing.</p>
+                                                <p>Primis aliquam mus lacinia lobortis phasellus suscipit. Fermentum lobortis non tristique ante proin sociis accumsan lobortis. Auctor etiam porttitor phasellus tempus cubilia ultrices tempor sagittis.</p>
+                                                <p><b>Now you can use your new site !</b></p>
+                                            </article>
+                                            <footer>
+                                                <div class="grid flush">
+                                                    <div class="g12 center">
+                                                        <a class="button icon fa-home" href="#" id="go-to-home" >Go to my site's home page</a>
+                                                    </div>
+                                                </div>
+                                            </footer>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer id="footer-wrapper">
+                <div class="container">
+                    <div class="grid">
+                        <div class="g12">
+                            <div id="copyright">
+                                <ul>
+                                    <li>&copy; Untitled.</li>
+                                    <li>All rights reseved</li>
+                                    <li>Design by @na2axl</li>
+                                    <li>Designed with G.R.I.D</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script type="text/javascript" src="../../js/jquery.min.js" ></script>
+        <script type="text/javascript" src="../../js/g.r.i.d.js" ></script>
+        <script type="text/javascript" src="main.js" ></script>
+    </body>
+
+</html>
