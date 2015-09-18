@@ -32,7 +32,12 @@ G.R.I.D/
 
 Note that this is the first release of G.R.I.D. So, if you find bugs or you need new features, [please open a new issue](https://github.com/na2axl/G.R.I.D/issues/new).
 
+## Creators
 
-## Documentation
+**Axel Nana**
 
-Bootstrap's documentation, included in this repo in the root directory, is built with [Jekyll](http://jekyllrb.com) and publicly hosted on GitHub Pages at <http://getbootstrap.com>. The docs may also be run locally.
+* <http://tutorialcenters.tk>
+
+## Copyright and license
+
+Code and documentation copyright 2015 Centers Technologies. Code released under [the MIT license](https://github.com/na2axl/G.R.I.D/blob/master/LICENSE).
