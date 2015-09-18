@@ -7,7 +7,7 @@ Welcome to G.R.I.D, a simple front-end framework who will help you to create an 
 
 What you have to do ?
 
-* [Download G.R.I.D](https://github.com/na2axl/G.R.I.D/files/G.R.I.D.zip).
+* [Download G.R.I.D](http://na2axl.github.io/G.R.I.D/files/G.R.I.D.zip).
 * Clone the repo: `git clone https://github.com/na2axl/G.R.I.D.git`.
 
 ## What's included
