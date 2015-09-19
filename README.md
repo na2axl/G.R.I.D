@@ -1,5 +1,5 @@
 # G.R.I.D
-Get Responsives elements In your Design
+Get Responsive elements In your Design
 
 Welcome to G.R.I.D, a simple front-end framework who will help you to create an fully responsive website !
 
@@ -18,8 +18,10 @@ If you have domnloaded G.R.I.D, you'll see something like this:
 G.R.I.D/
 ├── css/
 │   ├── g.r.i.d.css
+│   ├── g.r.i.d.min.css
 ├── js/
 │   ├── g.r.i.d.js
+│   ├── g.r.i.d.min.js
 └── fonts/
     ├── fontawesome-webfont.eot
     ├── fontawesome-webfont.svg
