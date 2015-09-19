@@ -67,11 +67,7 @@ h5 {
 
 code {
     border-radius: 2.5px;
-<<<<<<< HEAD
     background-color: #252121;
-=======
-    background-color: #7c8081;
->>>>>>> 554ec5042a4bb57bbcfa2d4015f9887fb81c61a0
     color: #fff;
     font-weight: 400;
     font-family: monospace;
@@ -81,7 +77,6 @@ code {
     border: 1px solid #252121;
 }
 
-<<<<<<< HEAD
 pre {
     border-radius: 2.5px;
     background-color: #252121;
@@ -136,8 +131,6 @@ blockquote {
     font-style: italic;
 }
 
-=======
->>>>>>> 554ec5042a4bb57bbcfa2d4015f9887fb81c61a0
 input[type="text"], input[type="password"], input[type="email"] {
     line-height: 1em;
 }
@@ -521,11 +514,8 @@ img.poster.left {
 
 ul.socials {
     cursor: default;
-<<<<<<< HEAD
     margin: 0;
     padding: 0;
-=======
->>>>>>> 554ec5042a4bb57bbcfa2d4015f9887fb81c61a0
 }
 
     ul.socials li {
@@ -590,11 +580,8 @@ ul.socials .icon.fa-github {
 #copyright ul {
     font-size: 0.8em;
     line-height: 1em;
-<<<<<<< HEAD
     margin: 0;
     padding: 0;
-=======
->>>>>>> 554ec5042a4bb57bbcfa2d4015f9887fb81c61a0
 }
 
 #copyright ul li:first-child {
@@ -639,14 +626,11 @@ ul.socials .icon.fa-github {
         margin: 0;
     }
 
-<<<<<<< HEAD
     ul,
     ol {
         padding-left: 1em;
     }
 
-=======
->>>>>>> 554ec5042a4bb57bbcfa2d4015f9887fb81c61a0
     #menu-header {
         padding: 0 1em;
     }
