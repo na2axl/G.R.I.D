@@ -340,12 +340,15 @@ button,
         line-height: 1;
     }
 
+<<<<<<< HEAD
     #header-wrapper h1 span {
         color: #c60;
         padding: 0;
         background-color: transparent;
     }
 
+=======
+>>>>>>> 554ec5042a4bb57bbcfa2d4015f9887fb81c61a0
     section {
         padding: 1em 2em;
     }
