@@ -471,7 +471,7 @@ m+" "+(d[m]||""),!b("@"+g)&&b("@"+a.prefix+g)&&a.atrules.push(m);k.removeChild(e
 )(window);
 
 /*******
- * jquery.simpleSlider | (c) Centers Tecnologies | tutorialcenters.tk @na2axl | MIT License
+ * jquery.simpleSlider | (c) Centers Technologies | tutorialcenters.tk @na2axl | MIT License
  ******/
 (function($){
 
