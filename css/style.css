@@ -123,6 +123,12 @@ ul,
 ol {
     padding-left: 2.5em;
 }
+p,
+blockquote,
+ul,
+ol {
+    margin-bottom: 2em;
+}
 
 blockquote {
     border-left: 5px solid #555;
@@ -462,9 +468,8 @@ section.box.special header h4 {
     font-size: 1em;
 }
 
-section.box p {
+section.box {
     line-height: 1.25em;
-    margin-bottom: 2em;
 }
 
 section.box footer {
