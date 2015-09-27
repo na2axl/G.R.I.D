@@ -1,5 +1,5 @@
 /**
- * G.R.I.D CSS : Get Responsives elements In your Design.
+ * G.R.I.D CSS : Get Responsive elements In your Design.
  */
 
  /* Reset */
@@ -1316,7 +1316,6 @@
 /* G.R.I.D */
     .grid {
         margin: 0 auto;
-
     }
 
     .grid > * {
