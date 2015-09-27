@@ -36,7 +36,7 @@ pre[class*="language-"] {
 
 pre[class*="language-"],
 :not(pre) > code[class*="language-"] {
-    background: #252121;
+    background: #333;
 }
 
 /* Code blocks */
@@ -59,7 +59,7 @@ pre[class*="language-"] {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-    color: #666;
+    color: #aaa;
     font-style: italic;
 }
 
@@ -224,7 +224,7 @@ pre[class*='language-'] {
 }
 pre[class*='language-'][data-language]::before {
     content: attr(data-language);
-    color: #252121;
+    color: #333;
     background-color: #fff;
     display: inline-block;
     position: absolute;
