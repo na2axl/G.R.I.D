@@ -1429,7 +1429,7 @@
             clear: left;
         }
 
-    /* G.R.I.D cells */
+    /* G.R.I.D elements */
         .g12 {
             width: 100%;
             clear: none;
@@ -1502,7 +1502,7 @@
             margin-left: 0;
         }
 
-    /* G.R.I.D cell's spaces */
+    /* G.R.I.D elements's spaces */
         .\-g11 {
             margin-left: 91.6666666667%;
         }
@@ -1537,11 +1537,20 @@
             margin-left:  8.3333333333%;
         }
 
+    /* G.R.I.D for PCs */
+        @media screen and (min-width: 1025px) {
+            /* Hiding some elements only on PCs */
+            .hide\28pc\29{
+                display: none !important;
+            }
+        }
+
     /* G.R.I.D for tablets */
         @media screen and (min-width: 481px) and (max-width: 1024px) {
         /* Container */
             body {
                 min-width: 1000px !important;
+                position: absolute;
             }
 
             .container {
@@ -1558,6 +1567,105 @@
                     max-width: calc(100% * 1.25) !important;
                     min-width: 100% !important;
                 }
+
+        /* Change G.R.I.D elements's widths and spaces on tablets */
+            .g12\28tablet\29 {
+                width: 100% !important;
+            }
+
+            .g11\28tablet\29 {
+                width: 91.6666666667% !important;
+            }
+
+            .g10\28tablet\29 {
+                width: 83.3333333333% !important;
+            }
+
+            .g9\28tablet\29 {
+                width: 75% !important;
+            }
+
+            .g8\28tablet\29 {
+                width: 66.6666666667% !important;
+            }
+
+            .g7\28tablet\29 {
+                width: 58.3333333333% !important;
+            }
+
+            .g6\28tablet\29 {
+                width: 50% !important;
+            }
+
+            .g5\28tablet\29 {
+                width: 41.6666666667% !important;
+            }
+
+            .g4\28tablet\29 {
+                width: 33.3333333333% !important;
+            }
+
+            .g3\28tablet\29 {
+                width: 25% !important;
+            }
+
+            .g2\28tablet\29 {
+                width: 16.6666666667% !important;
+            }
+
+            .g1\28tablet\29 {
+                width: 8.3333333333% !important;
+            }
+
+            .\-g11\28tablet\29 {
+                margin-left: 91.6666666667% !important;
+            }
+
+            .\-g10\28tablet\29 {
+                margin-left: 83.3333333333% !important;
+            }
+
+            .\-g9\28tablet\29 {
+                margin-left: 75% !important;
+            }
+
+            .\-g8\28tablet\29 {
+                margin-left: 66.6666666667% !important;
+            }
+
+            .\-g7\28tablet\29 {
+                margin-left: 58.3333333333% !important;
+            }
+
+            .\-g6\28tablet\29 {
+                margin-left: 50% !important;
+            }
+
+            .\-g5\28tablet\29 {
+                margin-left: 41.6666666667% !important;
+            }
+
+            .\-g4\28tablet\29 {
+                margin-left: 33.3333333333% !important;
+            }
+
+            .\-g3\28tablet\29 {
+                margin-left: 25% !important;
+            }
+
+            .\-g2\28tablet\29 {
+                margin-left: 16.6666666667% !important;
+            }
+
+            .\-g1\28tablet\29 {
+                margin-left: 8.3333333333% !important;
+            }
+
+        /* Hide somes elements only on tablets */
+            .hide\28tablet\29 {
+                display: none !important;
+            }
+
         }
 
     /* G.R.I.D for smatphones */
@@ -1582,9 +1690,13 @@
                     min-width: 100% !important;
                 }
 
-        /* G.R.I.D */
+        /* G.R.I.D updates */
             /* Variants */
                 /* Normal */
+                    .grid > *:first-child {
+                        padding-top: 0;
+                    }
+
                     .grid > * {
                         padding: 2.5em 0 0 2.5em;
                     }
@@ -1595,21 +1707,37 @@
                     }
 
                 /* Quarter */
+                    .grid.quarter > *:first-child {
+                        padding-top: 0;
+                    }
+
                     .grid.quarter > * {
                         padding: calc(2.5em * 0.25) 0 0 calc(2.5em * 0.25);
                     }
 
                 /* Half */
+                    .grid.half > *:first-child {
+                        padding-top: 0;
+                    }
+
                     .grid.half > * {
                         padding: calc(2.5em * 0.5) 0 0 calc(2.5em * 0.5);
                     }
 
                 /* One and (a) Half */
+                    .grid.oneandhalf > *:first-child {
+                        padding-top: 0;
+                    }
+
                     .grid.oneandhalf > * {
                         padding: calc(2.5em * 1.5) 0 0 calc(2.5em * 1.5);
                     }
 
                 /* Double */
+                    .grid.double > *:first-child {
+                        padding-top: 0;
+                    }
+
                     .grid.double > * {
                         padding: calc(2.5em * 2) 0 0 calc(2.5em * 2);
                     }
@@ -1623,112 +1751,186 @@
             }
 
             /* Force to show G.R.I.D */
-                /* G.R.I.D cells */
-                    .grid.force .g12 {
+                /* G.R.I.D elements */
+                    .grid.force > .g12 {
                         width: 100% !important;
-                        clear: none;
-                        margin-left: 0;
                     }
 
-                    .grid.force .g11 {
+                    .grid.force > .g11 {
                         width: 91.6666666667% !important;
-                        clear: none;
-                        margin-left: 0;
                     }
 
-                    .grid.force .g10 {
+                    .grid.force > .g10 {
                         width: 83.3333333333% !important;
-                        clear: none;
-                        margin-left: 0;
                     }
 
-                    .grid.force .g9 {
+                    .grid.force > .g9 {
                         width: 75% !important;
-                        clear: none;
-                        margin-left: 0;
                     }
 
-                    .grid.force .g8 {
+                    .grid.force > .g8 {
                         width: 66.6666666667% !important;
-                        clear: none;
-                        margin-left: 0;
                     }
 
-                    .grid.force .g7 {
+                    .grid.force > .g7 {
                         width: 58.3333333333% !important;
-                        clear: none;
-                        margin-left: 0;
                     }
 
-                    .grid.force .g6 {
+                    .grid.force > .g6 {
                         width: 50% !important;
-                        clear: none;
-                        margin-left: 0;
                     }
 
-                    .grid.force .g5 {
+                    .grid.force > .g5 {
                         width: 41.6666666667% !important;
-                        clear: none;
-                        margin-left: 0;
                     }
 
-                    .grid.force .g4 {
+                    .grid.force > .g4 {
                         width: 33.3333333333% !important;
-                        clear: none;
-                        margin-left: 0;
                     }
 
-                    .grid.force .g3 {
+                    .grid.force > .g3 {
                         width: 25% !important;
-                        clear: none;
-                        margin-left: 0;
                     }
 
-                    .grid.force .g2 {
+                    .grid.force > .g2 {
                         width: 16.6666666667% !important;
-                        clear: none;
-                        margin-left: 0;
                     }
 
-                    .grid.force .g1 {
+                    .grid.force > .g1 {
                         width: 8.3333333333% !important;
-                        clear: none;
-                        margin-left: 0;
                     }
 
-                /* G.R.I.D cell's spaces */
-                    .grid.force .\-g11 {
+                /* G.R.I.D elemets's spaces */
+                    .grid.force > .\-g11 {
                         margin-left: 91.6666666667%  !important;
                     }
-                    .grid.force .\-g10 {
+                    .grid.force > .\-g10 {
                         margin-left: 83.3333333333%  !important;
                     }
-                    .grid.force .\-g9 {
+                    .grid.force > .\-g9 {
                         margin-left: 75%  !important;
                     }
-                    .grid.force .\-g8 {
+                    .grid.force > .\-g8 {
                         margin-left: 66.6666666667% !important;
                     }
-                    .grid.force .\-g7 {
+                    .grid.force > .\-g7 {
                         margin-left: 58.3333333333% !important;
                     }
-                    .grid.force .\-g6 {
+                    .grid.force > .\-g6 {
                         margin-left: 50% !important;
                     }
-                    .grid.force .\-g5 {
+                    .grid.force > .\-g5 {
                         margin-left: 41.6666666667% !important;
                     }
-                    .grid.force .\-g4 {
+                    .grid.force > .\-g4 {
                         margin-left: 33.3333333333% !important;
                     }
-                    .grid.force .\-g3 {
+                    .grid.force > .\-g3 {
                         margin-left: 25% !important;
                     }
-                    .grid.force .\-g2 {
+                    .grid.force > .\-g2 {
                         margin-left: 16.6666666667% !important;
                     }
-                    .grid.force .\-g1 {
+                    .grid.force > .\-g1 {
                         margin-left:  8.3333333333% !important;
                     }
+
+        /* Change G.R.I.D elements's widths and spaces on phones */
+            .g12\28phone\29 {
+                width: 100% !important;
+            }
+
+            .g11\28phone\29 {
+                width: 91.6666666667% !important;
+            }
+
+            .g10\28phone\29 {
+                width: 83.3333333333% !important;
+            }
+
+            .g9\28phone\29 {
+                width: 75% !important;
+            }
+
+            .g8\28phone\29 {
+                width: 66.6666666667% !important;
+            }
+
+            .g7\28phone\29 {
+                width: 58.3333333333% !important;
+            }
+
+            .g6\28phone\29 {
+                width: 50% !important;
+            }
+
+            .g5\28phone\29 {
+                width: 41.6666666667% !important;
+            }
+
+            .g4\28phone\29 {
+                width: 33.3333333333% !important;
+            }
+
+            .g3\28phone\29 {
+                width: 25% !important;
+            }
+
+            .g2\28phone\29 {
+                width: 16.6666666667% !important;
+            }
+
+            .g1\28phone\29 {
+                width: 8.3333333333% !important;
+            }
+
+            .\-g11\28phone\29 {
+                margin-left: 91.6666666667% !important;
+            }
+
+            .\-g10\28phone\29 {
+                margin-left: 83.3333333333% !important;
+            }
+
+            .\-g9\28phone\29 {
+                margin-left: 75% !important;
+            }
+
+            .\-g8\28phone\29 {
+                margin-left: 66.6666666667% !important;
+            }
+
+            .\-g7\28phone\29 {
+                margin-left: 58.3333333333% !important;
+            }
+
+            .\-g6\28phone\29 {
+                margin-left: 50% !important;
+            }
+
+            .\-g5\28phone\29 {
+                margin-left: 41.6666666667% !important;
+            }
+
+            .\-g4\28phone\29 {
+                margin-left: 33.3333333333% !important;
+            }
+
+            .\-g3\28phone\29 {
+                margin-left: 25% !important;
+            }
+
+            .\-g2\28phone\29 {
+                margin-left: 16.6666666667% !important;
+            }
+
+            .\-g1\28phone\29 {
+                margin-left: 8.3333333333% !important;
+            }
+
+        /* Hide somes elements only on phones */
+            .hide\28phone\29 {
+                display: none !important;
+            }
 
         }
