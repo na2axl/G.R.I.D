@@ -5,45 +5,36 @@ var grid = function () {
     "use strict";
 
     var g = {
-    breakPoints: {
-        mobile: 480,
-        tablet: 1024,
-        }
-        ,
-    isMobile: false,
-    isTablet: false,
-    testSizes: function (width) {
-            if (width <= g.breakPoints.mobile) {
-                g.isMobile = true;
-                g.isTablet = false;
-            }
-            else {
-                g.isMobile = false;
-                g.isTablet = true;
-            }
-        }
-        ,
-    checkIsMobile: function () {
-            g.testSizes(bodyWidth);
-            return g.isMobile;
-        }
-        ,
-    checkIsTablet: function () {
-            g.testSizes(bodyWidth);
-            return g.isTablet;
-        }
-        ,
+        breakPoints: {
+            mobile: 480,
+            tablet: 1024,
+        },
+        isMobile: false,
+        isTablet: false,
+        testSizes: function (width) {
+                if (width <= g.breakPoints.mobile) {
+                    g.isMobile = true;
+                    g.isTablet = false;
+                }
+                else {
+                    g.isMobile = false;
+                    g.isTablet = true;
+                }
+        },
+        checkIsMobile: function () {
+                g.testSizes(bodyWidth);
+                return g.isMobile;
+        },
+        checkIsTablet: function () {
+                g.testSizes(bodyWidth);
+                return g.isTablet;
+        },
     };
 
     return g;
 
-}
-();
-(this, function ()
-    {
-        return grid
-    }
-);
+}();
+(this, function() { return grid });
 
 /*******
  * StyleFix 1.0.3 & PrefixFree 1.0.7 | @author Lea Verou | MIT license
@@ -471,7 +462,7 @@ m+" "+(d[m]||""),!b("@"+g)&&b("@"+a.prefix+g)&&a.atrules.push(m);k.removeChild(e
 )(window);
 
 /*******
- * jquery.simpleSlider | (c) Centers Technologies | tutorialcenters.tk @na2axl | MIT License
+ * jquery.simpleSlider | (c) Centers Technologies | http://tutorialcenters.tk | @na2axl | MIT License
  ******/
 (function($){
 
@@ -1012,7 +1003,7 @@ m+" "+(d[m]||""),!b("@"+g)&&b("@"+a.prefix+g)&&a.atrules.push(m);k.removeChild(e
 })(jQuery);
 
 /*******
- * G.R.I.D JS (Awesomes jQuery plugins) | (c) Centers Technologies | tutorialcenters.tk @na2axl | MIT Licensed
+ * G.R.I.D JS (Awesomes jQuery plugins) | (c) Centers Technologies | http://tutorialcenters.tk | @na2axl | MIT Licensed
  ******/
 (function ($)
     {
@@ -1023,8 +1014,7 @@ m+" "+(d[m]||""),!b("@"+g)&&b("@"+a.prefix+g)&&a.atrules.push(m);k.removeChild(e
                 breakPoints: {
                     mobile: 480,
                     tablet: 1024
-                    }
-                    ,
+                }
                 };
 
 
