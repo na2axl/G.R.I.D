@@ -1693,7 +1693,7 @@
         /* G.R.I.D updates */
             /* Variants */
                 /* Normal */
-                    .grid > *:first-child {
+                    .grid:first-child > *:first-child {
                         padding-top: 0;
                     }
 
@@ -1707,7 +1707,7 @@
                     }
 
                 /* Quarter */
-                    .grid.quarter > *:first-child {
+                    .grid.quarter:first-child > *:first-child {
                         padding-top: 0;
                     }
 
@@ -1716,7 +1716,7 @@
                     }
 
                 /* Half */
-                    .grid.half > *:first-child {
+                    .grid.half:first-child > *:first-child {
                         padding-top: 0;
                     }
 
@@ -1725,7 +1725,7 @@
                     }
 
                 /* One and (a) Half */
-                    .grid.oneandhalf > *:first-child {
+                    .grid.oneandhalf:first-child > *:first-child {
                         padding-top: 0;
                     }
 
@@ -1734,7 +1734,7 @@
                     }
 
                 /* Double */
-                    .grid.double > *:first-child {
+                    .grid.double:first-child > *:first-child {
                         padding-top: 0;
                     }
 
