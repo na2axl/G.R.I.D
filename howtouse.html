@@ -369,6 +369,40 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
 &lt;/div&gt;</code></pre>
                                     </p>
+                                    <p>
+                                        If you want to change the size of an element according to the viewport, you can use modifiers :
+                                        <ul class="default">
+                                            <li><code>(pc)</code> to set the element's width only on pc/desktop</li>
+                                            <li><code>(tablet)</code> to set the element's width only on tablets</li>
+                                            <li><code>(phone)</code> to set the element's width only on phones</li>
+                                        </ul>
+                                        <u>Example:</u>
+                                        <pre class="language-html"><code>&lt;!-- Change the width of an element according to the viewport --&gt;
+&lt;div class=&quot;grid&quot;&gt;
+    &lt;div class=&quot;g12 g6(phone)&quot;&gt;
+        &lt;p&gt;Some text&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                        In this example, the second <code>div</code> will take the 100% of the entire space of the grid in PC and tablet viewports, and will take the 50% of the entire space of the grid only on phone viewports.<br/>
+                                        You can also hide some elements according to the viewport, by using the class hide with one of the modifiers.<br/>
+                                        <u>Example:</u>
+                                        <pre class="language-html"><code>&lt;!-- An example of the use of modifiers with hide --&gt;
+&lt;div class=&quot;grid&quot;&gt;
+    &lt;div class=&quot;g6 hide(tablet) hide(phone)&quot;&gt;
+        &lt;p&gt;This text will only be showed on PCs&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;g6 hide(pc) hide(phone)&quot;&gt;
+        &lt;p&gt;This text will only be showed on tablets&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;g6 hide(pc) hide(tablet)&quot;&gt;
+        &lt;p&gt;This text will only be showed on phones&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;g6&quot;&gt;
+        &lt;p&gt;This text will be showed on all viewports&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                                    </p>
                                 </article>
                             </section>
                         </div>
