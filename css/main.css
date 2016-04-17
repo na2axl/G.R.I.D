@@ -1,5 +1,5 @@
-body, input[type="text"], input[type="password"], input[type="email"], textarea {
-    font-size: 14pt;
+body, select, input[type="text"], input[type="password"], input[type="email"], textarea {
+    font-size: 13pt;
     font-family: Segoe UI, Droid Sans, DejaVu Sans, Arial, sans-serif;
     background-color: #f3f6fa;
     color: #7c8081;
@@ -7,17 +7,21 @@ body, input[type="text"], input[type="password"], input[type="email"], textarea 
 }
 
 body {
-    margin: 0;
-    padding: 5em 0 0 0;
+    padding-top: 4em;
 }
 
 body.homepage {
-    margin: 0;
-    padding: 0;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
 body.homepage #logo {
     display: none;
+}
+
+.center {
+    text-align: center;
+    display: block;
 }
 
 a {
@@ -58,16 +62,21 @@ h3 {
 }
 
 h4 {
-    font-size: 1.5em;
+    font-size: 1.25em;
 }
 
 h5 {
     font-size: 1em;
 }
 
+hr.separator {
+    border: 1px solid #252121;
+    margin: 2em 0;
+}
+
 code {
-    border-radius: 2.5px;
-    background-color: #7c8081;
+    border-radius: 2px;
+    background-color: #333;
     color: #fff;
     font-weight: 400;
     font-family: monospace;
@@ -77,15 +86,57 @@ code {
     border: 1px solid #252121;
 }
 
-input[type="text"], input[type="password"], input[type="email"] {
+pre {
+    background-color: #333;
+    color: #fff;
+    font-weight: 400;
+    font-family: monospace;
+    font-size: 0.8em;
+    padding: 1em;
+    display: block;
+    line-height: 1.25;
+    word-break: break-all;
+    word-wrap: break-word;
+    overflow-x: auto;
+    margin: 0.5em 0;
+}
+
+pre code {
+    padding: 0px;
+    font-size: 0.8em;
+    white-space: pre-wrap;
+    background-color: transparent;
+    border: 0 none;
+}
+
+ul,
+ol {
+    padding-left: 2.5em;
+}
+
+p,
+blockquote,
+ul,
+ol {
+    margin-bottom: 2em;
+}
+
+blockquote {
+    border-left: 5px solid #555;
+    padding: 0.5em 1em;
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+select, input[type="text"], input[type="password"], input[type="email"] {
     line-height: 1em;
 }
 
-input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, textarea:focus {
+select, input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, textarea:focus {
     border-color: #696567;
 }
 
-input[type="text"], input[type="password"], input[type="email"], textarea {
+select, input[type="text"], input[type="password"], input[type="email"], textarea {
     -webkit-transition: background-color 0.3s ease-in-out 0s, border-color 0.3s ease-in-out 0s;
     -moz-transition: background-color 0.3s ease-in-out 0s, border-color 0.3s ease-in-out 0s;
     -o-transition: background-color 0.3s ease-in-out 0s, border-color 0.3s ease-in-out 0s;
@@ -99,6 +150,11 @@ input[type="text"], input[type="password"], input[type="email"], textarea {
     text-decoration: none;
     width: 100%;
     outline: 0px none;
+}
+
+select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
 }
 
 input[type="submit"], input[type="reset"], input[type="button"], button, .button {
@@ -118,6 +174,7 @@ input[type="submit"], input[type="reset"], input[type="button"], button, .button
     font-weight: 800;
     letter-spacing: 1px;
     display: inline-block;
+    text-decoration: none;
 }
 
 input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover, button:hover, .button:hover {
@@ -133,48 +190,53 @@ input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hove
     display: block;
 }
 
+body.homepage #header-wrapper {
+    margin-bottom: 4em;
+}
+
+#header-wrapper.menu-alted {
+    margin-bottom: 0 !important;
+}
+
 @-moz-keyframes reveal-banner {
-    0% {
+    from {
         opacity: 0;
     }
-
-    100% {
+    to {
         opacity: 1;
     }
 }
 
 @-webkit-keyframes reveal-banner {
-    0% {
+    from {
         opacity: 0;
     }
-
-    100% {
+    to {
         opacity: 1;
     }
 }
 
 @-ms-keyframes reveal-banner {
-    0% {
+    from {
         opacity: 0;
     }
-
-    100% {
+    to {
         opacity: 1;
     }
 }
 
 @keyframes reveal-banner {
-    0% {
+    from {
         opacity: 0;
     }
-
-    100% {
+    to {
         opacity: 1;
     }
 }
 
 #banner {
     -webkit-animation: 1.5s ease-in-out 0.25s normal forwards 1 running reveal-banner;
+    -ms-animation: 1.5s ease-in-out 0.25s normal forwards 1 running reveal-banner;
     -moz-animation: 1.5s ease-in-out 0.25s normal forwards 1 running reveal-banner;
     -o-animation: 1.5s ease-in-out 0.25s normal forwards 1 running reveal-banner;
     animation: 1.5s ease-in-out 0.25s normal forwards 1 running reveal-banner;
@@ -213,48 +275,45 @@ input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hove
 }
 
 @-moz-keyframes reveal-menu {
-    0% {
+    from {
         top: -5em;
     }
-
-    100% {
+    to {
         top: 0;
     }
 }
 
 @-webkit-keyframes reveal-menu {
-    0% {
+    from {
         top: -5em;
     }
-
-    100% {
+    to {
         top: 0;
     }
 }
 
 @-ms-keyframes reveal-menu {
-    0% {
+    from {
         top: -5em;
     }
-
-    100% {
+    to {
         top: 0;
     }
 }
 
 @keyframes reveal-menu {
-    0% {
+    from {
         top: -5em;
     }
-
-    100% {
+    to {
         top: 0;
     }
 }
 
-#menu-header.alt {
+.menu-header.alt {
     -webkit-animation: 0.5s ease 0s normal none 1 running none;
     -moz-animation: 0.5s ease 0s normal none 1 running none;
+    -ms-animation: 0.5s ease 0s normal none 1 running none;
     -o-animation: 0.5s ease 0s normal none 1 running none;
     animation: 0.5s ease 0s normal none 1 running none;
     background: transparent none repeat scroll 0% 0%;
@@ -262,15 +321,16 @@ input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hove
     position: relative;
 }
 
-#menu-header.reveal {
+.menu-header.reveal {
     -webkit-animation: 0.5s ease 0s normal none 1 running reveal-menu;
+    -ms-animation: 0.5s ease 0s normal none 1 running reveal-menu;
     -moz-animation: 0.5s ease 0s normal none 1 running reveal-menu;
     -o-animation: 0.5s ease 0s normal none 1 running reveal-menu;
     animation: 0.5s ease 0s normal none 1 running reveal-menu;
     box-shadow: rgba(0, 0, 0, 0.75) 0px 1px 5px 0px;
 }
 
-#menu-header {
+.menu-header {
     background-color: #252121;
     left: 0px;
     right: 0px;
@@ -284,11 +344,11 @@ input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hove
     height: 5em;
 }
 
-#menu-header h1.logo {
+.menu-header h1.logo {
     display: none;
 }
 
-#menu-header.reveal h1.logo {
+.menu-header.reveal h1.logo {
     display: block;
     float: left;
     font-size: 2em;
@@ -296,11 +356,11 @@ input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hove
     color: #fff;
 }
 
-#menu-header.alt nav.menu {
+.menu-header.alt nav.menu {
     text-align: center;
 }
 
-#menu-header.reveal nav.menu {
+.menu-header.reveal nav.menu {
     text-align: right;
     float: right;
 }
@@ -343,6 +403,14 @@ nav.menu ul li a:hover {
     background-repeat: no-repeat;
     background-size: 35em auto;
     padding: 2.5em 0;
+}
+
+section header {
+    margin-bottom: 2em;
+}
+
+section header p {
+    font-size: 0.8em;
 }
 
 section header.title {
@@ -408,9 +476,8 @@ section.box.special header h4 {
     font-size: 1em;
 }
 
-section.box p {
+section.box {
     line-height: 1.25em;
-    margin-bottom: 2em;
 }
 
 section.box footer {
@@ -430,6 +497,16 @@ section.box.featured-content h2 {
     border-bottom: 2px solid #252121;
     font-size: 3em;
     padding-bottom: 10px;
+    line-height: 1;
+}
+
+.section-title {
+    border-bottom: 1px solid #aaa;
+    padding-bottom: 0.5em;
+    margin-top: 1em;
+    width: 100%;
+    margin-bottom: 0.5em;
+    display: block;
 }
 
 img.featured {
@@ -448,6 +525,69 @@ img.poster.left {
     padding: 0;
 }
 
+.scrollspy {
+    position: fixed;
+    top: 4em;
+    width: 100%;
+    padding: 0 !important;
+}
+
+.scrollspy nav {
+    padding: 1em 0;
+    font-size: 0.8em;
+}
+
+.scrollspy nav a {
+    display: block;
+    padding: 0.25em 0 0.25em 1em;
+    border-left: 3px solid transparent;
+    color: #aaa;
+}
+
+.scrollspy nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+.scrollspy nav > ul > li > a {
+    padding-left: 2em;
+}
+
+.scrollspy nav > ul > li > ul > li > a {
+    padding-left: 4em;
+}
+
+.scrollspy nav > ul > li a {
+    text-decoration: none;
+}
+
+.scrollspy nav > ul > li > ul {
+    display: none;
+    font-size: 0.75em;
+    margin-bottom: 0;
+}
+
+.scrollspy nav > ul > li > ul > li a {
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+}
+
+.scrollspy nav > ul > li a.current,
+.scrollspy nav > ul > li.active > a {
+    border-left: 3px solid #252121;
+    color: #252121;
+}
+
+.scrollspy nav > ul > li.active > ul {
+    display: block;
+}
+
+.scrollspy nav > ul > li a:not(.current):hover {
+    border-left: 1px solid #252121;
+    color: #252121;
+    cursor: pointer;
+}
+
 #footer-wrapper {
     background-color: #252121;
     padding: 2.5em 0;
@@ -460,6 +600,8 @@ img.poster.left {
 
 ul.socials {
     cursor: default;
+    margin: 0;
+    padding: 0;
 }
 
     ul.socials li {
@@ -472,7 +614,7 @@ ul.socials {
             padding-left: 0;
         }
 
-ul.socials .icon {
+ul.socials .fa {
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
@@ -490,40 +632,42 @@ ul.socials .icon {
     width: 2.25em;
 }
 
-ul.socials .icon::before {
+ul.socials .fa::before {
     margin: 0;
     padding: 0;
 }
 
-    ul.socials .icon:hover {
-        top: -0.2em;
-    }
+ul.socials .fa:hover {
+    top: -0.2em;
+}
 
 ul.socials .label {
     display: none;
 }
 
-ul.socials .icon.fa-envelope {
+ul.socials .fa.fa-envelope {
     background: #7490c3;
     color: #fff;
 }
 
-    ul.socials .icon.fa-envelope:hover {
-        background: #829bc9;
-    }
+ul.socials .fa.fa-envelope:hover {
+    background: #829bc9;
+}
 
-ul.socials .icon.fa-github {
+ul.socials .fa.fa-github {
     background: #dcad8b;
     color: #fff;
 }
 
-    ul.socials .icon.fa-github:hover {
-        background: #e1b89b;
-    }
+ul.socials .fa.fa-github:hover {
+    background: #e1b89b;
+}
 
 #copyright ul {
     font-size: 0.8em;
     line-height: 1em;
+    margin: 0;
+    padding: 0;
 }
 
 #copyright ul li:first-child {
@@ -541,39 +685,47 @@ ul.socials .icon.fa-github {
 
 @media screen and (min-width: 481px) and (max-width: 1024px) {
     body, input[type="text"], input[type="password"], input[type="email"], textarea {
-        font-size: 12pt;
+        font-size: 11pt;
     }
 
-    body {
-        padding: 0;
-        margin: 5em 0 0 0;
-    }
-
-    #menu-header {
+    .menu-header {
         padding: 0 2em;
     }
 
     .container {
         padding: 0 4em;
     }
+
+    pre {
+        font-size: 1em;
+    }
 }
 
 @media screen and (max-width: 480px) {
     body, input[type="text"], input[type="password"], input[type="email"], textarea {
-        font-size: 10pt;
+        font-size: 9pt;
     }
 
     body {
         padding: 0;
-        margin: 0;
     }
 
-    #menu-header {
-        padding: 0 1em;
+    ul,
+    ol {
+        padding-left: 1em;
+    }
+
+    .menu-header {
+        padding: 0.25em 1em;
+        height: auto;
     }
 
     .container {
         padding: 0 2em;
+    }
+
+    pre {
+        font-size: 1em;
     }
 
     #copyright ul {

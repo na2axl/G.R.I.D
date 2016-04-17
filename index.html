@@ -2,10 +2,13 @@
 <html>
     <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>G.R.I.D : Get Responsives elements In your Design</title>
-        <link type="text/css" rel="stylesheet" href="css/g.r.i.d.css" />
-        <link type="text/css" rel="stylesheet" href="css/style.css" />
+        <meta name="viewport" content="width=device-width; initial-scale=1.0" />
+
+        <title>G.R.I.D - Get Responsive elements In your Design</title>
+
+        <link rel="stylesheet" type="text/css" href="./css/g.r.i.d.min.css" />
+        <link rel="stylesheet" type="text/css" href="./css/prism.min.css" />
+        <link rel="stylesheet" type="text/css" href="./css/main.min.css" />
     </head>
 
     <body class="homepage">
@@ -16,21 +19,27 @@
                         <div class="g12">
                             <div id="banner">
                                 <div class="content">
-                                    <img src="images/logo.png" class="featured fit" />
+                                    <img src="./images/logo.png" class="featured fit" />
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="grid">
                         <div class="g12">
-                            <div id="menu-header" class="alt">
+                            <div class="menu-header alt">
                                 <h1 class="logo">G.R.I.D</h1>
                                 <nav class="menu">
                                     <ul>
-                                        <li><a class="current icon fa-home" href="index.html">Home</a></li>
-                                        <li><a class=" icon fa-file-text-o" href="elements.css.html">Elements</a></li>
-                                        <li><a class="icon fa-question-circle" href="#">How to Use</a></li>
-                                        <li><a class="icon fa-folder" href="./examples/">Examples</a></li>
+                                        <li><a class="current fa fa-home" href="./index.html">Home</a></li>
+                                        <li>
+                                            <a class="fa fa-file-text-o" href="./elements.css.html">Elements</a>
+                                            <ul>
+                                                <li><a class="fa fa-file-text-o" href="./elements.css.html">G.R.I.D CSS</a></li>
+                                                <li><a class="fa fa-file-text-o" href="./elements.js.html">G.R.I.D JS</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a class="fa fa-question-circle" href="./howtouse.html">How to Use</a></li>
+                                        <li><a class="fa fa-folder" href="./examples/index.html">Examples</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -46,7 +55,7 @@
                                 <header>
                                     <h2>Welcome to G.R.I.D</h2>
                                 </header>
-                                <p>Welcome to <b>G.R.I.D</b>, the simple way to <b>Get Responsives elements In your Design !</b> <b>G.R.I.D</b> will help you to build a responsive theme for your website, or make your existing theme responsive ! <b>G.R.I.D</b> has also a Javascript version, who comes with a lot of jQuery plugins to help you to boost up the interactivity of your website !</p>
+                                <p>The simple way to <b>Get Responsive elements In your Design !</b> <b>G.R.I.D</b> will help you to build a responsive template for your website, or make your existing template responsive ! <b>G.R.I.D</b> has also a Javascript version, which comes with a lot of jQuery plugins to help you to boost up the interactivity of your website !</p>
                             </section>
                         </div>
                     </div>
@@ -83,17 +92,76 @@
                         </div>
                     </div>
                     <div class="grid">
+                        <div class="g12">
+                            <section class="box">
+                                <article>
+                                    <div class="grid">
+                                        <div class="g6">
+                                            <span class="image fit"><img src="./images/less.png" alt="Powered By Less"></span>
+                                        </div>
+                                        <div class="g6">
+                                            <h4>CSS Preprocessor</h4>
+                                            <p><b>G.R.I.D</b> is now powered by <b><a href="http://lesscss.org/">Less</a></b> ! The one of the most popular CSS preprocessors. You can quickly get started with precompiled <b>.css</b> files, or use <b>.less</b> source files to edit and compile your own version of G.R.I.D to create something more unique !</p>
+                                        </div>
+                                    </div>
+                                    <hr class="separator">
+                                    <div class="grid">
+                                        <div class="g6">
+                                            <h4>Ready for all devices</h4>
+                                            <p><b>G.R.I.D</b> adapts your websites and applications for various screen sizes, from phones to tablets, desktops and TVs, by using CSS media queries.</p>
+                                        </div>
+                                        <div class="g6">
+                                            <span class="image fit"><img src="./images/devices.png" alt="Compatible with all devices"></span>
+                                        </div>
+                                    </div>
+                                    <hr class="separator">
+                                    <div class="grid">
+                                        <div class="g6">
+                                            <span class="image fit"><img src="./images/plugins.png" alt="G.R.I.D jQuery Plugins"></span>
+                                        </div>
+                                        <div class="g6">
+                                            <h4>Javascript Plugins and CSS Helpers</h4>
+                                            <p><b>G.R.I.D</b> comes with a lot of <a href="./elements.js.html">jQuery plugins</a> (Dropdowns, Progress bars, Tooltips, Sliders, etc...) and some CSS helpers likes the FontAwesome icons pack and the awesome CSS animations pack !</p>
+                                        </div>
+                                    </div>
+                                </article>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="grid">
+                        <div class="g12">
+                            <section class="box">
+                                <header>
+                                    <h3>Built with G.R.I.D</h3>
+                                </header>
+                                <article>
+                                    <p>There are some websites designed with G.R.I.D. Start your own now with the code base of G.R.I.D or with one of our collection of <a href="./examples/index.html">examples</a></p>
+                                    <div class="grid quarter">
+                                        <div class="g3">
+                                            <a href="http://tutorialcenters.tk" class="center">
+                                                <span class="image fit"><img src="./images/site-tutorialcenters.png" alt="Tutorialcenters.tk"></span>
+                                            </a>
+                                            <a href="http://tutorialcenters.tk" class="center">
+                                                <span><b>Tutorialcenters</b></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </article>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="grid">
                         <div class="g6">
                             <section class="box">
                                 <header>
-                                    <h3>View G.R.I.D in action !</h3>
+                                    <h3>See G.R.I.D in action !</h3>
                                 </header>
                                 <article>
-                                    <p>Want to view G.R.I.D in action ? View all possibles, matchables, mixables G.R.I.D elements now !</p>
+                                    <p>Want to see G.R.I.D in action ? Take a view of some examples using G.R.I.D CSS and G.R.I.D JS elements now !</p>
                                 </article>
                                 <footer>
-                                    <a class="button more icon fa-arrow-right" href="elements.css.html">Go to G.R.I.D CSS demo !</a>
-                                    <a class="button more icon fa-arrow-right" href="elements.js.html">Go to G.R.I.D JS demo !</a>
+                                    <a class="button more fa fa-arrow-right" href="elements.css.html">Go to G.R.I.D CSS demo !</a>
+                                    <a class="button more fa fa-arrow-right" href="elements.js.html">Go to G.R.I.D JS demo !</a>
                                 </footer>
                             </section>
                         </div>
@@ -103,10 +171,10 @@
                                     <h3>How to use ?</h3>
                                 </header>
                                 <article>
-                                    <p>Want to know more with the use of G.R.I.D CSS and G.R.I.D JS ? Read our documentation !</p>
+                                    <p>Want to know more with the use of G.R.I.D CSS and G.R.I.D JS ? See how to get started !</p>
                                 </article>
                                 <footer>
-                                    <a class="button more icon fa-question-circle" href="#">Sorry but the documentation is not available now.</a>
+                                    <a class="button more fa fa-question-circle" href="howtouse.html">Getting started</a>
                                 </footer>
                             </section>
                         </div>
@@ -121,7 +189,7 @@
                                                 <h3>Download !</h3>
                                             </header>
                                             <article>
-                                                <p>Don't wait besides for a minute ! Download and use G.R.I.D on your website now ! You just have to choose your version.</p>
+                                                <p>Don't wait ! Download and use G.R.I.D on your website now ! You just have to choose your version.</p>
                                             </article>
                                         </section>
                                     </div>
@@ -131,7 +199,9 @@
                                                 <h4>Choose your download</h4>
                                             </header>
                                             <footer>
-                                                <a class="button more icon fa-download" href="./files/G.R.I.D.zip">G.R.I.D CSS + G.R.I.D JS</a>
+                                                <a class="button more fa fa-download" href="files/G.R.I.D.zip">G.R.I.D 2.0.0 (lastest version)</a>
+                                                <a class="button more fa fa-download" href="files/G.R.I.D-plus-examples.zip">G.R.I.D + Example templates</a>
+                                                <a class="button more fa fa-download" href="files/G.R.I.D-plus-examples.zip">View all downloads</a>
                                             </footer>
                                         </section>
                                     </div>
@@ -147,12 +217,12 @@
                         <div class="g12">
                             <ul class="socials">
                                 <li>
-                                    <a class="icon fa-envelope" title="Contact us !" href="mailto:ax.lnana@outlook.com">
+                                    <a class="fa fa-envelope" title="Contact us !" href="mailto:ax.lnana@outlook.com">
                                         <span class="label">Email</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="icon fa-github" title="Fork us on GitHub !" href="https://github.com/na2axl/G.R.I.D">
+                                    <a class="fa fa-github" title="Fork us on GitHub !" href="https://github.com/na2axl/G.R.I.D">
                                         <span class="label">Github</span>
                                     </a>
                                 </li>
@@ -163,7 +233,7 @@
                         <div class="g12">
                             <div id="copyright">
                                 <ul>
-                                    <li>&copy; 2015 Centers Technologies.</li>
+                                    <li>&copy; 2016 Centers Technologies.</li>
                                     <li>All rights reserved</li>
                                     <li>Designed with G.R.I.D, normally&hellip;</li>
                                 </ul>
@@ -173,8 +243,9 @@
                 </div>
             </footer>
         </div>
-        <script type="text/javascript" src="js/jquery.min.js"></script>
-        <script type="text/javascript" src="js/g.r.i.d.js"></script>
-        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="./js/jquery.min.js"></script>
+        <script type="text/javascript" src="./js/g.r.i.d.min.js"></script>
+        <script type="text/javascript" src="./js/prism.min.js"></script>
+        <script type="text/javascript" src="./js/main.min.js"></script>
     </body>
 </html>

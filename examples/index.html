@@ -1,11 +1,15 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+
 <html>
+
     <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>G.R.I.D : Get Responsives elements In your Design</title>
-        <link type="text/css" rel="stylesheet" href="../css/g.r.i.d.css" />
-        <link type="text/css" rel="stylesheet" href="../css/style.css" />
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+        <title>Getting started with G.R.I.D</title>
+        <link rel="stylesheet" type="text/css" href="../css/g.r.i.d.min.css" />
+        <link rel="stylesheet" type="text/css" href="../css/prism.min.css" />
+        <link rel="stylesheet" type="text/css" href="../css/main.min.css" />
     </head>
 
     <body>
@@ -14,14 +18,21 @@
                 <div class="container">
                     <div class="grid">
                         <div class="g12">
-                            <div id="menu-header" class="reveal">
+                            <div class="menu-header reveal">
                                 <h1 class="logo">G.R.I.D</h1>
                                 <nav class="menu">
                                     <ul>
-                                        <li><a class="current icon fa-home" href="index.html">Home</a></li>
-                                        <li><a class=" icon fa-file-text-o" href="elements.css.html">Elements</a></li>
-                                        <li><a class="icon fa-question-circle" href="#">How to Use</a></li>
-                                        <li><a class="icon fa-folder" href="./examples/">Examples</a></li>
+                                        <li><a class="fa fa-home" href="./index.html">Home</a></li>
+                                        <li class="opener">
+                                            <a class="fa fa-file-text-o" href="./elements.css.html">Elements</a>
+
+                                            <ul class="">
+                                                <li><a class="fa fa-file-text-o" href="./elements.css.html" style="display: block;">G.R.I.D CSS</a></li>
+                                                <li><a class="fa fa-file-text-o" href="./elements.js.html" style="display: block;">G.R.I.D JS</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a class="current fa fa-question-circle" href="./howtouse.html">How to Use</a></li>
+                                        <li><a class="fa fa-folder" href="./examples/index.html">Examples</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -31,28 +42,32 @@
             </header>
             <div id="main-wrapper">
                 <div class="container">
-                    <div class="grid">
+                    <div class="grid double">
                         <div class="g12">
                             <section>
                                 <header class="title">
                                     <h2>G.R.I.D example templates</h2>
+                                    <p>See what you can do with G.R.I.D</p>
                                 </header>
-                                <p>See what you can do with G.R.I.D</p>
                             </section>
                         </div>
                     </div>
-                    <div class="grid">
-                        <div class="g4">
-                            <a href="./blog"><img class="image featured fit" src="./screenshots/blog.png" /></a>
-                        </div>
-                        <div class="g4">
-                            <a href="./cover"><img class="image featured fit" src="./screenshots/cover.png" /></a>
-                        </div>
-                        <div class="g4">
-                            <a href="./installer"><img class="image featured fit" src="./screenshots/installer.png" /></a>
+                    <div class="grid double">
+                        <div class="g12">
+                            <div class="grid">
+                                <div class="g4">
+                                    <a href="./blog/index.html"><img class="image featured fit" src="./screenshots/blog.png" /></a>
+                                </div>
+                                <div class="g4">
+                                    <a href="./cover/index.html"><img class="image featured fit" src="./screenshots/cover.png" /></a>
+                                </div>
+                                <div class="g4">
+                                    <a href="./installer/index.html"><img class="image featured fit" src="./screenshots/installer.png" /></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="grid">
+                    <div class="grid double">
                         <div class="g12">
                             <section class="box for-special">
                                 <div class="grid flush">
@@ -62,7 +77,7 @@
                                                 <h3>Download !</h3>
                                             </header>
                                             <article>
-                                                <p>Don't wait besides for a minute ! Download and use G.R.I.D on your website now ! You just have to choose your version.</p>
+                                                <p>Don't wait ! Download and use G.R.I.D on your website now ! You just have to choose your version.</p>
                                             </article>
                                         </section>
                                     </div>
@@ -72,7 +87,9 @@
                                                 <h4>Choose your download</h4>
                                             </header>
                                             <footer>
-                                                <a class="button more icon fa-download" href="../files/G.R.I.D.zip">G.R.I.D CSS + G.R.I.D JS</a>
+                                                <a class="button more fa fa-download" href="files/G.R.I.D.zip">G.R.I.D 2.0.0 (lastest version)</a>
+                                                <a class="button more fa fa-download" href="files/G.R.I.D-plus-examples.zip">G.R.I.D + Example templates</a>
+                                                <a class="button more fa fa-download" href="files/G.R.I.D-plus-examples.zip">View all downloads</a>
                                             </footer>
                                         </section>
                                     </div>
@@ -82,40 +99,42 @@
                     </div>
                 </div>
             </div>
-            <footer id="footer-wrapper">
-                <div class="container">
-                    <div class="grid">
-                        <div class="g12">
-                            <ul class="socials">
-                                <li>
-                                    <a class="icon fa-envelope" title="Contact us !" href="mailto:ax.lnana@outlook.com">
-                                        <span class="label">Email</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="icon fa-github" title="Fork us on GitHub !" href="https://github.com/na2axl/G.R.I.D">
-                                        <span class="label">Github</span>
-                                    </a>
-                                </li>
+        <footer id="footer-wrapper">
+            <div class="container">
+                <div class="grid">
+                    <div class="g12">
+                        <ul class="socials">
+                            <li>
+                                <a class="fa fa-envelope" title="Contact us !" href="mailto:ax.lnana@outlook.com">
+                                    <span class="label">Email</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="fa fa-github" title="Fork us on GitHub !" href="https://github.com/na2axl/G.R.I.D">
+                                    <span class="label">Github</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="grid">
+                    <div class="g12">
+                        <div id="copyright">
+                            <ul>
+                                <li>&copy; 2016 Centers Technologies.</li>
+                                <li>All rights reserved</li>
+                                <li>Designed with G.R.I.D, normally&hellip;</li>
                             </ul>
                         </div>
                     </div>
-                    <div class="grid">
-                        <div class="g12">
-                            <div id="copyright">
-                                <ul>
-                                    <li>&copy; 2015 Centers Technologies.</li>
-                                    <li>All rights reserved</li>
-                                    <li>Designed with G.R.I.D, normally&hellip;</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-            </footer>
-        </div>
+            </div>
+        </footer>
+
         <script type="text/javascript" src="../js/jquery.min.js"></script>
-        <script type="text/javascript" src="../js/g.r.i.d.js"></script>
-        <script type="text/javascript" src="../js/main.js"></script>
+        <script type="text/javascript" src="../js/g.r.i.d.min.js"></script>
+        <script type="text/javascript" src="../js/prism.min.js"></script>
+        <script type="text/javascript" src="../js/main.min.js"></script>
     </body>
+
 </html>

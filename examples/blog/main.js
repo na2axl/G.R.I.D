@@ -2,18 +2,13 @@
 
     $(function(){
 
-        $.grid.init({
-            breakPoints: {
-                mobile: 480,
-                tablet: 1024
-            }
+        GRID.init();
+
+        $.grid.menuToggle({
+            menu: 'nav.menu'
         });
 
-        $.grid.menu.toggle({
-            breakPoint: 480
-        });
-
-        $.grid.panel({
+        $.grid.panels({
             wrapper: ".panels"
         });
 

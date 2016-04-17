@@ -340,6 +340,12 @@ button,
         line-height: 1;
     }
 
+    #header-wrapper h1 span {
+        color: #c60;
+        padding: 0;
+        background-color: transparent;
+    }
+
     section {
         padding: 1em 2em;
     }

@@ -2,15 +2,10 @@
 
     $(function(){
 
-        $.grid.init({
-            breakPoints: {
-                mobile: 480,
-                tablet: 1024
-            }
-        });
+        GRID.init();
 
-        $.grid.menu.toggle({
-            breakPoint: 480
+        $.grid.menuToggle({
+            breakPoint: 1024
         });
 
     })
