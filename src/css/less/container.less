@@ -1,0 +1,98 @@
+// =
+// Container
+// ==================================================
+
+body {
+    min-width: @body-pc-min-width;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: @body-pc-min-width;
+}
+
+.container.small {
+    width: (@body-pc-min-width * @container-small-scale);
+}
+
+.container.big {
+    min-width: @body-pc-min-width;
+    max-width: (@body-pc-min-width * @container-big-scale);
+}
+
+@media screen and (min-width: @grid-tablet-min-width) and (max-width: @grid-tablet-max-width) {
+    body {
+        min-width: @body-tablet-min-width !important;
+        width: @body-tablet-min-width !important;
+    }
+
+    .container {
+        width: @body-tablet-min-width !important;
+    }
+
+    .container.small {
+        width: (@body-tablet-min-width * @container-small-scale) !important;
+    }
+
+    .container.big {
+        min-width: @body-tablet-min-width !important;
+        max-width: (@body-tablet-min-width * @container-big-scale) !important;
+    }
+
+    body.non-responsive {
+        min-width: @body-pc-min-width !important;
+    
+        .container {
+            width: @body-pc-min-width !important;
+        }
+        
+        .container.small {
+            width: (@body-pc-min-width * @container-small-scale) !important;
+        }
+        
+        .container.big {
+            min-width: @body-pc-min-width !important;
+            max-width: (@body-pc-min-width * @container-big-scale) !important;
+        }
+    }
+}
+
+@media screen and (max-width: @grid-phone-max-width) {
+    body {
+        min-width: @body-phone-min-width !important;
+        width: @body-phone-min-width !important;
+    }
+
+    .container {
+        width: @body-phone-min-width !important;
+    }
+
+    .container.small {
+        width: (@body-phone-min-width * @container-small-scale) !important;
+    }
+
+    .container.big {
+        min-width: @body-phone-min-width !important;
+        max-width: (@body-phone-min-width * @container-big-scale) !important;
+    }
+
+    body.non-responsive {
+        min-width: @body-pc-min-width !important;
+    
+        .container {
+            width: @body-pc-min-width !important;
+        }
+        
+        .container.small {
+            width: (@body-pc-min-width * @container-small-scale) !important;
+        }
+        
+        .container.big {
+            min-width: @body-pc-min-width !important;
+            max-width: (@body-pc-min-width * @container-big-scale) !important;
+        }
+    }
+}
