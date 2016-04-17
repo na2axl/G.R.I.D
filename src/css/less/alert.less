@@ -1,0 +1,113 @@
+// =
+// Alerts
+// ==================================================
+
+.alert {
+    padding: 1em;
+    margin: 1em 0;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    font-size: 0.8em;
+    color: #fff;
+    min-height: 3em;
+    position: relative;
+    
+    &.info {
+        background-color: @alert-info-color;
+        border-color: @alert-info-border-color;
+    }
+    
+    &.success {
+        background-color: @alert-success-color;
+        border-color: @alert-success-border-color;
+    }
+    
+    &.warning {
+        background-color: @alert-warning-color;
+        border-color: @alert-warning-border-color;
+    }
+    
+    &.loading {
+        background-color: @alert-loading-color;
+        border-color: @alert-loading-border-color;
+    }
+    
+    .text {
+        display: block;
+    }
+    
+    .loader + .text {
+        margin-left: 5em;
+    }
+    
+    .close + .text {
+        margin-right: 5em;
+    }
+    
+    .loader + .close + .text {
+        margin: 0 5em;
+    }
+    
+    .loader {
+        background-color: #FFF;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        width: 4em;
+        position: absolute;
+        text-align: center;
+    }
+    
+    .loader::before {
+        color: @alert-loading-color;
+        content: "\f110";
+        font-family: FontAwesome;
+        font-size: 2em;
+        line-height: 0.5;
+        width: 2em;
+        top: 50%;
+        margin-top: -0.25em;
+        left: 0px;
+        position: absolute;
+        .animation(~'spin 2s infinite linear');
+    }
+    
+    .close {
+        cursor: pointer;
+        background-color: #fff;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 4em;
+        position: absolute;
+        text-align: center;
+    }
+    
+    .close::before {
+        content: "\f057";
+        font-family: FontAwesome;
+        font-size: 2em;
+        line-height: 0.5;
+        width: 2em;
+        top: 50%;
+        margin-top: -0.25em;
+        right: 0;
+        position: absolute;
+    }
+    
+    &.info .close::before {
+        color: @alert-info-color;
+    }
+    
+    &.success .close::before {
+        color: @alert-success-color;
+    }
+    
+    &.warning .close::before {
+        color: @alert-warning-color;
+    }
+    
+    &.loading .close::before {
+        color: @alert-loading-color;
+    }    
+}

@@ -1,0 +1,165 @@
+// G.R.I.D Generators
+// --------------------------------------------------
+.generate-grid(@n: @grid-max-elements, @i: 1) when (@i =< @n) {
+    .g@{i} {
+        width: (@i * @grid-max-width / @n);
+        clear: none;
+        margin-left: 0;
+    }
+    .generate-grid(@n, (@i + 1));
+}
+// --------------------------------------------------
+.generate-pushing-grid(@n: @grid-max-elements, @i: 1) when (@i =< (@n - 1)) {
+    .\-g@{i} {
+        margin-left: (@i * @grid-max-width / @n);
+    }
+    .generate-pushing-grid(@n, (@i + 1));
+}
+// --------------------------------------------------
+.generate-force-grid(@n: @grid-max-elements, @i: 1) when (@i =< @n) {
+    .grid.force > .g@{i} {
+        width: (@i * @grid-max-width / @n) !important;
+    }
+    .generate-force-grid(@n, (@i + 1));
+}
+// --------------------------------------------------
+.generate-force-pushing-grid(@n: @grid-max-elements, @i: 1) when (@i =< (@n - 1)) {
+    .grid.force > .\-g@{i} {
+        margin-left: (@i * @grid-max-width / @n) !important;
+    }
+    .generate-force-pushing-grid(@n, (@i + 1));
+}
+// --------------------------------------------------
+.generate-grid-on(@e, @n: @grid-max-elements, @i: 1) when (@i =< @n) {
+    .g@{i}\28@{e}\29 {
+        width: (@i * @grid-max-width / @n) !important;
+    }
+    .generate-grid-on(@e, @n, (@i + 1));
+}
+// --------------------------------------------------
+.generate-pushing-grid-on(@e, @n: @grid-max-elements, @i: 1) when (@i =< (@n - 1)) {
+    .\-g@{i}\28@{e}\29 {
+        margin-left: (@i * @grid-max-width / @n) !important;
+    }
+    .generate-pushing-grid-on(@e, @n, (@i + 1));
+}
+// --------------------------------------------------
+.generate-clean-grid(@n: @grid-max-elements, @i: 1) when (@i =< @n) {
+    .g@{i} + * {
+        &:extend(.clean-element);
+    }
+    .generate-clean-grid(@n, (@i + 1));
+}
+// --------------------------------------------------
+.reset-grid-width(@n: @grid-max-elements, @i: 1) when (@i =< @n) {
+    .g@{i} {
+        width: @grid-max-width;
+    }
+    .reset-grid-width(@n, (@i + 1))
+}
+// --------------------------------------------------
+.reset-grid-space(@n: @grid-max-elements, @i: 1) when (@i =< @n) {
+    .\-g@{i} {
+        margin-left: 0;
+    }
+    .reset-grid-space(@n, (@i + 1))
+}
+// --------------------------------------------------
+
+// G.R.I.D elements hidder
+// --------------------------------------------------
+.hide(@view) {
+    .hide\28@{view}\29 {
+        display: none !important;
+    }
+}
+// --------------------------------------------------
+
+// CSS Transitions handler
+// --------------------------------------------------
+.transition(@params) {
+    -webkit-transition: @params;
+       -moz-transition: @params;
+        -ms-transition: @params;
+         -o-transition: @params;
+            transition: @params;
+}
+.transition-property(@prop) {
+    -webkit-transition-property: @prop;
+       -moz-transition-property: @prop;
+         -o-transition-property: @prop;
+        -ms-transition-property: @prop;
+            transition-property: @prop;
+}
+.transition-timing-function(@func) {
+    -webkit-transition-timing-function: @func;
+       -moz-transition-timing-function: @func;
+        -ms-transition-timing-function: @func;
+         -o-transition-timing-function: @func;
+            transition-timing-function: @func;
+}
+// --------------------------------------------------
+
+// CSS Transforms handler
+// --------------------------------------------------
+.transform(@params) {
+    -webkit-transform: @params;
+       -moz-transform: @params;
+        -ms-transform: @params;
+         -o-transform: @params;
+            transform: @params;
+}
+.transform-origin(@params) {
+    -webkit-transform-origin: @params;
+       -moz-transform-origin: @params;
+        -ms-transform-origin: @params;
+         -o-transform-origin: @params;
+            transform-origin: @params;
+}
+// --------------------------------------------------
+
+// CSS Animations handler
+// --------------------------------------------------
+.animation(@params) {
+    -webkit-animation: @params;
+       -moz-animation: @params;
+        -ms-animation: @params;
+         -o-animation: @params;
+            animation: @params;
+}
+.animation-duration(@time) {
+	-webkit-animation-duration: @time;
+       -moz-animation-duration: @time;
+        -ms-animation-duration: @time;
+	     -o-animation-duration: @time;
+	        animation-duration: @time;
+}
+.animation-fill-mode(@mode) {
+	-webkit-animation-fill-mode: @mode;
+       -moz-animation-fill-mode: @mode;
+        -ms-animation-fill-mode: @mode;
+	     -o-animation-fill-mode: @mode;
+	        animation-fill-mode: @mode;
+}
+.animation-iteration-count(@mode) {
+	-webkit-animation-iteration-count: @mode;
+       -moz-animation-iteration-count: @mode;
+        -ms-animation-iteration-count: @mode;
+	     -o-animation-iteration-count: @mode;
+	        animation-iteration-count: @mode;
+}
+.animation-name(@name) {
+	-webkit-animation-name: @name;
+       -moz-animation-name: @name;
+        -ms-animation-name: @name;
+	     -o-animation-name: @name;
+	        animation-name: @name;
+}
+.animation-timing-function(@func) {
+	-webkit-animation-timing-function: @func;
+       -moz-animation-timing-function: @func;
+        -ms-animation-timing-function: @func;
+	     -o-animation-timing-function: @func;
+	        animation-timing-function: @func;
+}
+// --------------------------------------------------

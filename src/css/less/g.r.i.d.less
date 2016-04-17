@@ -1,0 +1,300 @@
+/*!
+ * G.R.I.D : Get Responsive elements In your Design
+ * Version 2.0.0
+ * Copyright 2015-2016 Centers Technologies. All rights reserved.
+ * Licensed under MIT
+ */
+
+// **************************************************
+// Variables and Mixins
+// **************************************************
+@import 'variables.less';
+@import 'mixins.less';
+
+// **************************************************
+// CSS Reset
+// **************************************************
+@import 'reset.less';
+@import 'normalize.less';
+
+// **************************************************
+// Body and container
+// **************************************************
+@import 'container.less';
+
+// **************************************************
+// Fonts
+// **************************************************
+@import 'fonts.less';
+
+// **************************************************
+// Globals
+// **************************************************
+@import 'global.less';
+@import 'image.less';
+
+// **************************************************
+// Animations
+// **************************************************
+@import 'animations.less';
+
+// **************************************************
+// G.R.I.D JS plugins
+// **************************************************
+@import 'carousel.less';
+@import 'slider.less';
+@import 'progress.less';
+@import 'alert.less';
+@import 'dropdown.less';
+@import 'panels.less';
+@import 'phone-menu.less';
+@import 'tooltips.less';
+
+// --------------------------------------------------
+// Devices compatibility
+// --------------------------------------------------
+@-webkit-viewport   { width: device-width; }
+@-moz-viewport      { width: device-width; }
+@-ms-viewport       { width: device-width; }
+@-o-viewport        { width: device-width; }
+@viewport           { width: device-width; }
+
+// --------------------------------------------------
+// G.R.I.D Variants
+// --------------------------------------------------
+.grid {
+    & > & {
+        float: none !important;
+    }
+
+    &:after,
+    &:before {
+        clear: both;
+        content: '';
+        height: 0;
+        display: block;
+    }
+    
+    // ---------- Normal
+    margin: 0 auto;
+    margin: 0 0 0 -(@grid-spacing);
+    & > * {
+        float: left;
+        padding: 0 0 0 @grid-spacing;
+    }
+    & + & > * {
+        padding: @grid-spacing 0 0 @grid-spacing !important;
+    }
+
+    // ---------- Flush
+    &.flush {
+        margin: 0;
+    }
+    &.flush > * {
+        padding: 0;
+    }
+    & + &.flush > * {
+        padding: 0 0 0 0 !important;
+    }
+    
+    // ---------- Quarter
+    &.quarter {
+        margin: 0 0 0 -(@grid-quarter-spacing);
+    }
+    &.quarter > * {
+        padding: 0 0 0 @grid-quarter-spacing;
+    }
+    & + &.quarter > * {
+        padding: @grid-quarter-spacing 0 0 @grid-quarter-spacing !important;
+    }
+    
+    // ---------- Half
+    &.half {
+        margin: 0 0 0 -(@grid-half-spacing);
+    }
+    &.half > * {
+        padding: 0 0 0 @grid-half-spacing;
+    }
+    & + &.half > * {
+        padding: @grid-half-spacing 0 0 @grid-half-spacing  !important;
+    }
+    
+    // ---------- One and (a) Half
+    &.oneandhalf {
+        margin: 0 0 0 -(@grid-oneandhalf-spacing);
+    }
+    &.oneandhalf > * {
+        padding: 0 0 0 @grid-oneandhalf-spacing;
+    }
+    & + &.oneandhalf > * {
+        padding: @grid-oneandhalf-spacing 0 0 @grid-oneandhalf-spacing !important;
+    }
+    
+    // ---------- Double
+    &.double {
+        margin: 0 0 0 -(@grid-double-spacing);
+    }
+    &.double > * {
+        padding: 0 0 0 @grid-double-spacing;
+    }
+    & + &.double > * {
+        padding: @grid-double-spacing 0 0 @grid-double-spacing !important;
+    }
+}
+// --------------------------------------------------
+
+
+// --------------------------------------------------
+// G.R.I.D Elements
+// --------------------------------------------------
+.clean-element {
+    clear: left;
+}
+.generate-clean-grid();
+// --------------------------------------------------
+.generate-grid();
+// --------------------------------------------------
+.generate-pushing-grid();
+// --------------------------------------------------
+.generate-force-grid();
+// --------------------------------------------------
+.generate-force-pushing-grid();
+// --------------------------------------------------
+
+
+// --------------------------------------------------
+// G.R.I.D for PCs and TVs
+// --------------------------------------------------
+@media screen and (min-width: @grid-pc-min-width) {
+    // Hiding some elements only on PCs and TVs
+    .hide(~'pc');
+}
+// --------------------------------------------------
+
+
+// --------------------------------------------------
+// G.R.I.D for tablets
+// --------------------------------------------------
+@media screen and (min-width: @grid-tablet-min-width) and (max-width: @grid-tablet-max-width) {
+    // --------------------------------------------------
+    // G.R.I.D Elements
+    // --------------------------------------------------
+    body:not(.non-responsive) {
+        .generate-grid-on(~'tablet');
+    }
+    // --------------------------------------------------
+    body:not(.non-responsive) {
+        .generate-pushing-grid-on(~'tablet');
+    }
+    // --------------------------------------------------
+
+    // Hide some elements only on tablets
+    body:not(.non-responsive) {
+        .hide(~'tablet');
+    }
+}
+
+// --------------------------------------------------
+// G.R.I.D for smatphones
+// --------------------------------------------------
+@media screen and (max-width: @grid-phone-max-width) {
+    // --------------------------------------------------
+    // G.R.I.D Variants
+    // --------------------------------------------------
+    // Update G.R.I.D
+    body:not(.non-responsive) .grid {
+        // ---------- Normal
+        > * {
+            padding: @grid-spacing 0 0 @grid-spacing;
+        }
+        > :first-child {
+            padding-top: 0;
+        }
+
+    
+        // ---------- Flush
+        &.flush {
+            > * {
+                padding: 0;
+            }
+            
+            > :first-child {
+                padding-top: 0;
+            }
+        }
+        
+        // ---------- Quarter
+        &.quarter {
+            > * {
+                padding: @grid-quarter-spacing 0 0 @grid-quarter-spacing;
+            }
+            
+            > :first-child {
+                padding-top: 0;
+            }
+        }
+        
+        // ---------- Half
+        &.half {
+            > * {
+                padding: @grid-half-spacing 0 0 @grid-half-spacing;
+            }
+            
+            > :first-child {
+                padding-top: 0;
+            }
+        }
+        
+        // ---------- One and (a) Half
+        &.oneandhalf {
+            > * {
+                padding: @grid-oneandhalf-spacing 0 0 @grid-oneandhalf-spacing;
+            }
+            
+            > :first-child {
+                padding-top: 0;
+            }
+        }
+        
+        // ---------- Double
+        &.double {
+            > * {
+                padding: @grid-double-spacing 0 0 @grid-double-spacing;
+            }
+            
+            > :first-child {
+                padding-top: 0;
+            }
+        }
+    }
+    // --------------------------------------------------
+
+    // --------------------------------------------------
+    // G.R.I.D Elements
+    // --------------------------------------------------
+    // Reset G.R.I.D elements's widths to G.R.I.D max width
+    body:not(.non-responsive) {
+        .reset-grid-width();
+    }
+    // --------------------------------------------------
+    // Reset G.R.I.D elements's spaces
+    body:not(.non-responsive) {
+        .reset-grid-space();
+    }
+    // --------------------------------------------------
+    // Change G.R.I.D elements's widths on phones
+    body:not(.non-responsive) {
+        .generate-grid-on(~'phone');
+    }
+    // --------------------------------------------------
+    // Change G.R.I.D elements's spaces on phones
+    body:not(.non-responsive) {
+        .generate-pushing-grid-on(~'phone');
+    }
+    // --------------------------------------------------
+
+    // Hide some elements only on phones
+    body:not(.non-responsive) {
+        .hide(~'phone');
+    }
+}

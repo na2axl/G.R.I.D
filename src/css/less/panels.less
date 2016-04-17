@@ -1,0 +1,69 @@
+// =
+// Panels
+// ==================================================
+
+.panel-wrapper {
+    padding: 0;
+
+    > nav {
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-panel {
+        border-bottom: 1px solid #DDD;
+        padding-left: 0px;
+        margin-bottom: 0px;
+        list-style: outside none none;
+
+        &::before,
+        &::after {
+            display: table;
+            content: " ";
+        }
+
+        &::after {
+            clear: both;
+        }
+
+        > li {
+            margin-bottom: -1px;
+            position: relative;
+            display: inline-block;
+
+            > a.active,
+            > a.active:hover {
+                color: #555;
+                cursor: default;
+                background-color: #FFF;
+                border-width: 1px;
+                border-bottom-width: 2px;
+                border-style: solid;
+                border-color: #DDD #DDD transparent;
+                -moz-border-top-colors: none;
+                -moz-border-right-colors: none;
+                -moz-border-bottom-colors: none;
+                -moz-border-left-colors: none;
+                -webkit-border-image: none;
+                -moz-border-image: none;
+                -o-border-image: none;
+                border-image: none;
+            }
+
+            > a {
+                margin-right: 2px;
+                line-height: 1.42857;
+                border: 1px solid transparent;
+                border-radius: 4px 4px 0px 0px;
+                position: relative;
+                display: block;
+                padding: 10px 15px;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .panel {
+        padding: 2em 0 0 0;
+    }
+}
