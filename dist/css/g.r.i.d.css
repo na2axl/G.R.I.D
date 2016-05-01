@@ -333,60 +333,60 @@ body {
 }
 @media screen and (min-width: 481px) and (max-width: 1024px) {
   body {
-    min-width: 1000px !important;
-    width: 1000px !important;
+    min-width: 1000px;
+    width: 1000px;
   }
   .container {
-    width: 1000px !important;
+    width: 1000px;
   }
   .container.small {
-    width: 750px !important;
+    width: 750px;
   }
   .container.big {
-    min-width: 1000px !important;
-    max-width: 1250px !important;
+    min-width: 1000px;
+    max-width: 1250px;
   }
   body.non-responsive {
-    min-width: 70em !important;
+    min-width: 70em;
   }
   body.non-responsive .container {
-    width: 70em !important;
+    width: 70em;
   }
   body.non-responsive .container.small {
-    width: 52.5em !important;
+    width: 52.5em;
   }
   body.non-responsive .container.big {
-    min-width: 70em !important;
-    max-width: 87.5em !important;
+    min-width: 70em;
+    max-width: 87.5em;
   }
 }
 @media screen and (max-width: 480px) {
   body {
-    min-width: 100% !important;
-    width: 100% !important;
+    min-width: 100%;
+    width: 100%;
   }
   .container {
-    width: 100% !important;
+    width: 100%;
   }
   .container.small {
-    width: 75% !important;
+    width: 75%;
   }
   .container.big {
-    min-width: 100% !important;
-    max-width: 125% !important;
+    min-width: 100%;
+    max-width: 125%;
   }
   body.non-responsive {
-    min-width: 70em !important;
+    min-width: 70em;
   }
   body.non-responsive .container {
-    width: 70em !important;
+    width: 70em;
   }
   body.non-responsive .container.small {
-    width: 52.5em !important;
+    width: 52.5em;
   }
   body.non-responsive .container.big {
-    min-width: 70em !important;
-    max-width: 87.5em !important;
+    min-width: 70em;
+    max-width: 87.5em;
   }
 }
 @font-face {
@@ -8205,3 +8205,5 @@ nav.phone-menu ul li.menu-item a {
     display: none !important;
   }
 }
+
+/*# sourceMappingURL=g.r.i.d.css.map */
