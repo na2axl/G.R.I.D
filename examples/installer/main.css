@@ -297,7 +297,6 @@ button,
     section.blog-header::after {
         width: 25%;
     }
-
 }
 
 @media screen and (max-width: 480px) {
@@ -366,11 +365,11 @@ button,
     }
 
     ul.nav-panel li a {
-        display: none;
+        text-align: center;
     }
 
-    ul.nav-panel li a.active {
-        display: block;
+    ul.nav-panel li a .step-num {
+        margin: 0 !important;
     }
 
     #copyright ul {
