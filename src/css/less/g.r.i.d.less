@@ -156,10 +156,6 @@
 // --------------------------------------------------
 .generate-pushing-grid();
 // --------------------------------------------------
-.generate-force-grid();
-// --------------------------------------------------
-.generate-force-pushing-grid();
-// --------------------------------------------------
 
 
 // --------------------------------------------------
@@ -291,6 +287,12 @@
     body:not(.non-responsive) {
         .generate-pushing-grid-on(~'phone');
     }
+    // --------------------------------------------------
+    // Force the aspect of G.R.I.D elements
+    .generate-force-grid();
+    // --------------------------------------------------
+    // Force G.R.I.D elements's spaces
+    .generate-force-pushing-grid();
     // --------------------------------------------------
 
     // Hide some elements only on phones
