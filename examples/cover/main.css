@@ -591,9 +591,14 @@ nav.menu > ul > li > a:hover {
     padding-left: 1em;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1024px) {
     body {
         font-size: 0.8em;
+        width: 100%;
+    }
+
+    .container {
+        width: 100%;
     }
 
     #header-wrapper {
