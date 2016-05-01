@@ -12,6 +12,10 @@ body {
     width: 100%;
 }
 
+.container {
+    width: 100%;
+}
+
 a,
 a:hover {
     color: #fff;
