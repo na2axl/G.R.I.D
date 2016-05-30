@@ -10,10 +10,16 @@ the interactivity of your website !
 
 To get started, check out [the G.R.I.D page](http://na2axl.github.io/G.R.I.D)!
 
+
+
 ## Table of Contents
 
 * [Quick start](#quick-start)
 * [Bugs and feature requests](#bugs-and-feature-requests)
+* [Creators](#creators)
+* [Copyright and license](#copyright-and-license)
+
+
 
 ## Quick start
 
