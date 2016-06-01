@@ -1,12 +1,11 @@
 # G.R.I.D - Get Responsive Elements In your Design
 
-[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.txt)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
 
 G.R.I.D is the simple way to **Get Responsive elements In your Design** !
 **G.R.I.D** will help you to build a responsive template for your website,
-or make your existing template responsive ! G.R.I.D has also a Javascript
-version, which comes with a lot of jQuery plugins to help you to boost up
-the interactivity of your website !
+or make your existing template responsive ! G.R.I.D has also a JavaScript
+version, which comes with a lot of jQuery plugins to help you to boost up your website !
 
 To get started, check out [the G.R.I.D page](http://na2axl.github.io/G.R.I.D)!
 
@@ -32,7 +31,7 @@ for more informations about framework.
 
 ### What's included
 
-[G.R.I.D only](http://na2axl.github.io/G.R.I.D/files/G.R.I.D.zip) package have
+[G.R.I.D only](http://na2axl.github.io/G.R.I.D/files/G.R.I.D.zip) package has
 all you need to use G.R.I.D on your website. Once downloaded, unzip the file
 to see this structure :
 
@@ -54,7 +53,7 @@ G.R.I.D/
 ```
 
 [G.R.I.D + example templates](http://na2axl.github.io/G.R.I.D/files/G.R.I.D-plus-examples.zip)
-package have all you need to use G.R.I.D on your website, and all the example
+package has all you need to use G.R.I.D on your website, and all the example
 templates. Once downloaded, unzip the file to see this structure :
 
 ```
