@@ -23,23 +23,60 @@ body {
     max-width: (@body-pc-min-width * @container-big-scale);
 }
 
-@media screen and (min-width: @grid-tablet-min-width) and (max-width: @grid-tablet-max-width) {
+@media screen and (min-width: @grid-tablet-narrow-min-width) and (max-width: @grid-tablet-narrow-max-width) {
     body {
-        min-width: @body-tablet-min-width;
-        width: @body-tablet-min-width;
+        min-width: @body-tablet-narrow-min-width;
+        width: @body-tablet-narrow-min-width;
     }
 
     .container {
-        width: @body-tablet-min-width;
+        width: @body-tablet-narrow-min-width;
     }
 
     .container.small {
-        width: (@body-tablet-min-width * @container-small-scale);
+        width: (@body-tablet-narrow-min-width * @container-small-scale);
     }
 
     .container.big {
-        min-width: @body-tablet-min-width;
-        max-width: (@body-tablet-min-width * @container-big-scale);
+        min-width: @body-tablet-narrow-min-width;
+        max-width: (@body-tablet-narrow-min-width * @container-big-scale);
+    }
+
+    body.non-responsive {
+        min-width: @body-pc-min-width;
+
+        .container {
+            width: @body-pc-min-width;
+        }
+
+        .container.small {
+            width: (@body-pc-min-width * @container-small-scale);
+        }
+
+        .container.big {
+            min-width: @body-pc-min-width;
+            max-width: (@body-pc-min-width * @container-big-scale);
+        }
+    }
+}
+
+@media screen and (min-width: @grid-tablet-wide-min-width) and (max-width: @grid-tablet-wide-max-width) {
+    body {
+        min-width: @body-tablet-wide-min-width;
+        width: @body-tablet-wide-min-width;
+    }
+
+    .container {
+        width: @body-tablet-wide-min-width;
+    }
+
+    .container.small {
+        width: (@body-tablet-wide-min-width * @container-small-scale);
+    }
+
+    .container.big {
+        min-width: @body-tablet-wide-min-width;
+        max-width: (@body-tablet-wide-min-width * @container-big-scale);
     }
 
     body.non-responsive {

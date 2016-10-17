@@ -2,25 +2,25 @@
 // Carousel
 // ==================================================
 
-.carousel {
+.grid-carousel {
     position: relative;
     overflow: hidden;
-    padding: @carousel-article-margin 0 @carousel-article-margin 0;
+    padding: @carousel-article-margin 0;
     margin-bottom: 0;
 
-    &.controlsnothover {
-        .item {
-            &:first-child {
-                margin-left: @carousel-article-margin;
-            }
-
-            &:last-child {
-                margin-right: @carousel-article-margin;
-            }
+    &.grid-carousel-controls-not-hover {
+      .grid-carousel-item {
+            margin: 0 (@carousel-article-margin / 2);
         }
     }
 
-    .forward, .backward {
+    .grid-carousel-wrapper {
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+    }
+
+    .grid-carousel-forward, .grid-carousel-backward {
         position: absolute;
         top: 50%;
         width: @carousel-nav-button-width;
@@ -29,7 +29,7 @@
         cursor: pointer;
     }
 
-    .forward::before, .backward::before {
+    .grid-carousel-forward::before, .grid-carousel-backward::before {
         content: '';
         display: block;
         width: @carousel-nav-button-width;
@@ -43,7 +43,7 @@
         .transition(~'background-color 0.35s ease-in-out');
     }
 
-    .forward::after, .backward::after {
+    .grid-carousel-forward::after, .grid-carousel-backward::after {
         font-family: FontAwesome;
         font-size: (@carousel-nav-button-width / 2);
         line-height: (@carousel-nav-button-height / 2);
@@ -56,44 +56,44 @@
         margin: -(@carousel-nav-button-height / 4) 0 0 0;
     }
     
-    .forward:hover:before, .backward:hover:before {
+    .grid-carousel-forward:hover::before, .grid-carousel-backward:hover::before {
         background-color: rgba(37, 33, 33, 0.75);
     }
     
-    .forward {
+    .grid-carousel-forward {
         right: 0;
     }
     
-    .forward::before {
+    .grid-carousel-forward::before {
         right: 0;
-        border-radius: 5px 0px 0px 5px;
+        border-radius: 5px 0 0 5px;
     }
     
-    .forward::after {
+    .grid-carousel-forward::after {
         content: "\f138";
     }
     
-    .backward {
+    .grid-carousel-backward {
         left: 0;
     }
     
-    .backward::before {
+    .grid-carousel-backward::before {
         left: 0;
-        border-radius: 0px 5px 5px 0px;
+        border-radius: 0 5px 5px 0;
     }
     
-    .backward::after {
+    .grid-carousel-backward::after {
         content: "\f137";
     }
     
-    .reel {
+    .grid-carousel-reel {
         white-space: nowrap;
         position: relative;
         -webkit-overflow-scrolling: touch;
         padding: 0;
     }
     
-    .item {
+    .grid-carousel-item {
         display: inline-block;
         width: @carousel-article-width;
         background: #fff;
@@ -108,7 +108,7 @@
             margin-right: 0;
         }
         
-        &.loading {
+        &.grid-alert-loading {
             opacity: 0;
         }
         

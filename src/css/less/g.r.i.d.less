@@ -1,6 +1,6 @@
 /*!
  * G.R.I.D : Get Responsive elements In your Design
- * Version 2.0.0
+ * Version 2.1.0
  * Copyright 2015-2016 Centers Technologies. All rights reserved.
  * Licensed under MIT
  */
@@ -18,7 +18,7 @@
 @import 'normalize.less';
 
 // **************************************************
-// Body and container
+// Body and element
 // **************************************************
 @import 'container.less';
 
@@ -41,6 +41,7 @@
 // **************************************************
 // G.R.I.D JS plugins
 // **************************************************
+@import 'popup.less';
 @import 'carousel.less';
 @import 'slider.less';
 @import 'progress.less';
@@ -171,7 +172,7 @@
 // --------------------------------------------------
 // G.R.I.D for tablets
 // --------------------------------------------------
-@media screen and (min-width: @grid-tablet-min-width) and (max-width: @grid-tablet-max-width) {
+@media screen and (min-width: @grid-tablet-narrow-min-width) and (max-width: @grid-tablet-wide-max-width) {
     // --------------------------------------------------
     // G.R.I.D Elements
     // --------------------------------------------------
@@ -189,7 +190,7 @@
         .hide(~'tablet');
     }
 }
-@media screen and (min-width: @grid-tablet-min-width) and (max-width: @grid-tablet-wide-min-width) {
+@media screen and (min-width: @grid-tablet-narrow-min-width) and (max-width: @grid-tablet-narrow-max-width) {
     // --------------------------------------------------
     // G.R.I.D Variants
     // --------------------------------------------------
@@ -276,12 +277,12 @@
     // --------------------------------------------------
     // Change G.R.I.D elements's widths on phones
     body:not(.non-responsive) {
-        .generate-grid-on(~'phone');
+        .generate-grid-on(~'tablet-narrow');
     }
     // --------------------------------------------------
     // Change G.R.I.D elements's spaces on phones
     body:not(.non-responsive) {
-        .generate-pushing-grid-on(~'phone');
+        .generate-pushing-grid-on(~'tablet-narrow');
     }
     // --------------------------------------------------
     // Force the aspect of G.R.I.D elements
@@ -293,13 +294,31 @@
 
     // Hide some elements only on phones
     body:not(.non-responsive) {
-        .hide(~'phone');
+        .hide(~'tablet-narrow');
     }
 
 }
+@media screen and (min-width: @grid-tablet-wide-min-width) and (max-width: @grid-tablet-wide-max-width) {
+    // --------------------------------------------------
+    // G.R.I.D Elements
+    // --------------------------------------------------
+    body:not(.non-responsive) {
+        .generate-grid-on(~'tablet-wide');
+    }
+    // --------------------------------------------------
+    body:not(.non-responsive) {
+        .generate-pushing-grid-on(~'tablet-wide');
+    }
+    // --------------------------------------------------
+
+    // Hide some elements only on tablets
+    body:not(.non-responsive) {
+        .hide(~'tablet-wide');
+    }
+}
 
 // --------------------------------------------------
-// G.R.I.D for smatphones
+// G.R.I.D for smartphones
 // --------------------------------------------------
 @media screen and (max-width: @grid-phone-max-width) {
     // --------------------------------------------------

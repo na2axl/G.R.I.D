@@ -15,7 +15,7 @@ body {
     -webkit-text-size-adjust:none;
 }
 
-body.is-loading * {
+body.grid-is-loading * {
     -moz-animation: none !important;
     -webkit-animation: none !important;
     -ms-animation: none !important;
@@ -43,7 +43,7 @@ blockquote, q {
     quotes:none;
 }
 
-blockquote:before, blockquote:after, q:before, q:after {
+blockquote::before, blockquote::after, q::before, q::after {
     content:'';
     content:none;
 }
@@ -53,7 +53,7 @@ table {
     border-spacing:0;
 }
 
-*, *:before, *:after {
+*, *::before, *::after {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;

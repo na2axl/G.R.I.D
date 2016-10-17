@@ -2,7 +2,7 @@
 // Alerts
 // ==================================================
 
-.alert {
+.grid-alert {
     padding: 1em;
     margin: 1em 0;
     border: 1px solid transparent;
@@ -12,53 +12,53 @@
     min-height: 3em;
     position: relative;
     
-    &.info {
+    &.grid-alert-info {
         background-color: @alert-info-color;
         border-color: @alert-info-border-color;
     }
     
-    &.success {
+    &.grid-alert-success {
         background-color: @alert-success-color;
         border-color: @alert-success-border-color;
     }
     
-    &.warning {
+    &.grid-alert-warning {
         background-color: @alert-warning-color;
         border-color: @alert-warning-border-color;
     }
     
-    &.loading {
+    &.grid-alert-loading {
         background-color: @alert-loading-color;
         border-color: @alert-loading-border-color;
     }
     
-    .text {
+    .grid-alert-text {
         display: block;
     }
     
-    .loader + .text {
+    .grid-alert-loader + .grid-alert-text {
         margin-left: 5em;
     }
     
-    .close + .text {
+    .grid-alert-close + .grid-alert-text {
         margin-right: 5em;
     }
     
-    .loader + .close + .text {
+    .grid-alert-loader + .grid-alert-close + .grid-alert-text {
         margin: 0 5em;
     }
     
-    .loader {
+    .grid-alert-loader {
         background-color: #FFF;
-        top: 0px;
-        bottom: 0px;
-        left: 0px;
+        top: 0;
+        bottom: 0;
+        left: 0;
         width: 4em;
         position: absolute;
         text-align: center;
     }
     
-    .loader::before {
+    .grid-alert-loader::before {
         color: @alert-loading-color;
         content: "\f110";
         font-family: FontAwesome;
@@ -67,12 +67,12 @@
         width: 2em;
         top: 50%;
         margin-top: -0.25em;
-        left: 0px;
+        left: 0;
         position: absolute;
         .animation(~'spin 2s infinite linear');
     }
     
-    .close {
+    .grid-alert-close {
         cursor: pointer;
         background-color: #fff;
         top: 0;
@@ -83,7 +83,7 @@
         text-align: center;
     }
     
-    .close::before {
+    .grid-alert-close::before {
         content: "\f057";
         font-family: FontAwesome;
         font-size: 2em;
@@ -95,19 +95,19 @@
         position: absolute;
     }
     
-    &.info .close::before {
+    &.grid-alert-info .grid-alert-close::before {
         color: @alert-info-color;
     }
     
-    &.success .close::before {
+    &.grid-alert-success .grid-alert-close::before {
         color: @alert-success-color;
     }
     
-    &.warning .close::before {
+    &.grid-alert-warning .grid-alert-close::before {
         color: @alert-warning-color;
     }
     
-    &.loading .close::before {
+    &.grid-alert-loading .grid-alert-close::before {
         color: @alert-loading-color;
     }    
 }
