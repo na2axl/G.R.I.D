@@ -113,7 +113,6 @@ closed issues. If your problem or idea is not addressed yet,
 **Axel Nana**
 
 * <https://github.com/na2axl>
-* <https://tutorialcenters.tk>
 
 
 
